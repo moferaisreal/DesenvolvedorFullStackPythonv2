@@ -9,6 +9,64 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css
 "
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <section>
+      <div class="container">
+        <div class="container">
+          <div class="row col-12"><h1>Formulário de Envio</h1></div>
+        </div>
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Nome</label>
+            <input
+              required
+              type="text"
+              class="form-control"
+              id="name"
+              aria-describedby="name"
+              placeholder="João Maria"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              required
+              type="email"
+              class="form-control"
+              id="email"
+              aria-describedby="emailHelp"
+              placeholder="joaomaria@seuemail.com"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="telefone" class="form-label">Telefone</label>
+            <input
+              required
+              type="tel"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="(99)99999-9999"
+            />
+          </div>
+
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+            />
+            <label class="form-check-label" for="exampleCheck1"
+              >Você concorda?</label
+            >
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js
+"></script>
+  </body>
 </html>
