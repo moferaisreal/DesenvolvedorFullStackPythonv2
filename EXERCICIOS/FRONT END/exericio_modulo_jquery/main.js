@@ -1,6 +1,6 @@
 $(document).ready(function () {
-  $("form").submit(function (event) {
-    event.preventDefault();
+  $("form").submit(function (e) {
+    e.preventDefault();
     var task = $("#todoInput").val();
     var newTask = $("<li>" + task + "</li>");
     $("#todoList").append(newTask);
