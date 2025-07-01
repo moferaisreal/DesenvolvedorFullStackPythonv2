@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bot Saloon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karma:wght@300;400;500;600;700&family=Pirata+One&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css
+"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand pirata-one-regular" href="#">Bot Saloon</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a
+                  class="karma-light nav-link active"
+                  aria-current="page"
+                  href="#home"
+                  >Sobre Nós</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="karma-light nav-link" href="#features"
+                  >Por que nós?</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="karma-light nav-link" href="#pricing">Cardápio</a>
+              </li>
+              <li class="nav-item">
+                <a class="karma-light nav-link" href="#contact">Reserve já!</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- main -->
+    <main>
+      <!-- hero -->
+      <div class="container col-xxl-8 px-4 py-5" id="home">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img
+              src="./assets/imgs/bot_saloon.jpg"
+              class="d-block mx-lg-auto img-fluid"
+              alt="Bot Saloon"
+              width="700"
+              height="500"
+              loading="lazy"
+            />
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3 pirata-one-regular">
+              Bot Saloon - Autêntico Bar do Velho Oeste
+            </h1>
+            <p class="lead ubuntu-mono-bold">
+              Onde Lendas Nascem e Histórias São Contadas.
+            </p>
+            <p class="karma-semibold">
+              O <strong>Bot Saloon</strong> nasceu da paixão pela era dourada do
+              Velho Oeste americano. Fundado em 2018, nosso estabelecimento foi
+              cuidadosamente planejado para transportar você de volta aos tempos
+              dos cowboys, xerifes e pioneiros que desbravaram as fronteiras.
+            </p>
+            <p class="karma-semibold">
+              Cada detalhe foi pensado para criar uma
+              <strong> experiência imersiva autêntica </strong>. Das madeiras
+              envelhecidas às ferraduras originais, dos revólveres históricos
+              aos barris de carvalho, tudo contribui para uma atmosfera única na
+              região.
+            </p>
+            <p class="karma-semibold">
+              Mais que um bar, somos umportal para uma época lendária
+              <strong>portal para uma época lendária</strong>, onde
+              hospitalidade, coragem e amizade eram os valores mais preciosos da
+              fronteira.
+            </p>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <a href="#pricing">
+                <button
+                  type="button"
+                  class="karma-light btn btn-primary btn-lg px-4 me-md-2"
+                >
+                  Ver Cardápio
+                </button>
+              </a>
+              <a href="#contact">
+                <button
+                  type="button"
+                  class="karma-light btn btn-outline-secondary btn-lg px-4"
+                >
+                  Fazer Reserva
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- porque nos -->
+      <div class="container px-4 py-5" id="features">
+        <h1 class="pb-2 border-bottom text-center pirata-one-regular">
+          Porque Nós?
+        </h1>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          <div class="col">
+            <h3 class="fs-2 ubuntu-mono-bold">Ambiente Autêntico</h3>
+            <p class="karma-regular">
+              Decoração western com madeira rústica, ferraduras e objetos de
+              época.
+            </p>
+          </div>
+          <div class="col">
+            <h3 class="fs-2 ubuntu-mono-bold">Drinks Especiais</h3>
+            <p class="karma-regular">
+              Coquetéis autorais inspirados no Velho Oeste com whiskeys premium.
+            </p>
+          </div>
+          <div class="col">
+            <h3 class="fs-2 ubuntu-mono-bold">Música ao Vivo</h3>
+            <p class="karma-regular">
+              Shows de country, blues e folk todas de quinta a domingo.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- carousel -->
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./assets/imgs/bar_area.jpg"
+              class="d-block w-100 vh-100"
+              alt="Area do Bar"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="ubuntu-mono-bold">— João Batista, caminhoneiro</h5>
+              <p class="karma-regular">
+                “O melhor uísque que já tomei, e olha que não sou novato na
+                estrada! O bartender manda muito bem e ainda conta umas
+                histórias que parecem saídas de um faroeste.”
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./assets/imgs/kitchen_area.jpg"
+              class="d-block w-100 vh-100"
+              alt="Nossa Cozinha"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="ubuntu-mono-bold">
+                — Renato Lima, amante da culinária rústica
+              </h5>
+              <p class="karma-regular">
+                “Experimentei o bife de costela com batatas rústicas... Voltei
+                três vezes na mesma semana. Uma verdadeira viagem no tempo pelo
+                sabor.”
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./assets/imgs/firepit_area.jpg"
+              class="d-block w-100 vh-100"
+              alt="Área comum"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="ubuntu-mono-bold">— Marcelo Figueiredo, arquiteto</h5>
+              <p class="karma-regular">
+                “Sentar nas cadeiras de couro desgastado, perto da lareira,
+                tomando um bourbon... é quase uma terapia. O ambiente é
+                acolhedor e cheio de detalhes incríveis.”
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./assets/imgs/poker_area.jpg"
+              class="d-block w-100 vh-100"
+              alt="Área de poker"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="ubuntu-mono-bold">
+                — Tiago ‘O Sortudo’, jogador de fim de semana
+              </h5>
+              <p class="karma-regular">
+                “Desafiei um cowboy no pôquer e saí sem camisa — mas valeu cada
+                segundo! As mesas são autênticas e o ambiente é puro
+                entretenimento.”
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- Cardápio -->
+      <div class="container py-5" id="pricing">
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+          <h2 class="display-4 fw-normal pirata-one-regular">Cardápio</h2>
+          <p class="fs-4 text-muted ubuntu-mono-regular">
+            Sabores Autênticos do Velho Oeste!!!
+          </p>
+        </div>
+        <div
+          class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-3 text-center"
+        >
+          <!-- Hardtack -->
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <img
+                src="./assets/imgs/hardtrack.jpg"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal pirata-one-regular">
+                  Hardtack Histórico
+                </h4>
+                <h5
+                  class="ubuntu-mono-bold card-subtitle mb-2 text-body-secondary"
+                >
+                  Petisco
+                </h5>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title ubuntu-mono-regular">
+                  <small class="text-muted fw-light">Ingredientes:</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4 karma-regular">
+                  <li>Farinha de trigo</li>
+                  <li>Água</li>
+                  <li>Sal</li>
+                  <li>Assado lentamente como faziam os pioneiros</li>
+                </ul>
+                <a
+                  href="#contact"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Reserve já!"
+                >
+                  <button
+                    type="button"
+                    class="w-100 btn btn-lg btn-outline-primary"
+                  >
+                    R$15
+                    <small class="text-muted fw-light">Serve</small>
+
+                    <big>1 </big
+                    ><small class="text-muted fw-light">Pessoa(s)</small>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Cozido Fronteira -->
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+              <img src="./assets/imgs/stew.jpg" class="card-img-top" alt="" />
+              <div
+                class="card-header py-3 text-white bg-primary border-primary"
+              >
+                <h4 class="my-0 fw-normal pirata-one-regular">
+                  Cozido Fronteira
+                </h4>
+                <h5
+                  class="ubuntu-mono-bold card-subtitle mb-2 text-body-secondary"
+                >
+                  Especialidade
+                </h5>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title ubuntu-mono-regular">
+                  <small class="text-muted fw-light">Ingredientes:</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4 karma-regular">
+                  <li>Carne bovina</li>
+                  <li>Batata</li>
+                  <li>Cenoura</li>
+                  <li>Mandioca</li>
+                  <li>Repolho</li>
+                  <li>Linguiça defumada</li>
+                  <li>Temperos especiais da casa</li>
+                </ul>
+                <a
+                  href="#contact"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Reserve já!"
+                >
+                  <button type="button" class="w-100 btn btn-lg btn-primary">
+                    R$145
+                    <small class="text fw-light">Serve</small>
+
+                    <big>2-3 </big
+                    ><small class="text fw-light">Pessoa(s)</small>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Biscoito Cowboy-->
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <img
+                src="./assets/imgs/cowboy biscuit.jpg"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal pirata-one-regular">
+                  Biscoito Cowboy
+                </h4>
+                <h5
+                  class="ubuntu-mono-bold card-subtitle mb-2 text-body-secondary"
+                >
+                  Acompanhamento
+                </h5>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title ubuntu-mono-regular">
+                  <small class="text-muted fw-light">Ingredientes:</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4 karma-regular">
+                  <li>Farinha de trigo</li>
+                  <li>Manteiga</li>
+                  <li>Fermento</li>
+                  <li>Sal</li>
+                  <li>Leite</li>
+                  <li>Servido quente com mel selvagem</li>
+                </ul>
+                <a
+                  href="#contact"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Reserve já!"
+                >
+                  <button type="button" class="w-100 btn btn-lg btn-primary">
+                    R$18
+                    <small class="text fw-light">Serve</small>
+
+                    <big>1 </big><small class="text fw-light">Pessoa(s)</small>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Churrasco do Xerife -->
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <img src="./assets/imgs/steak.jpg" class="card-img-top" alt="" />
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal pirata-one-regular">
+                  Churrasco do Xerife
+                </h4>
+                <h5
+                  class="ubuntu-mono-bold card-subtitle mb-2 text-body-secondary"
+                >
+                  Prato Principal
+                </h5>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title ubuntu-mono-regular">
+                  <small class="text-muted fw-light">Ingredientes:</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4 karma-regular">
+                  <li>Costela bovina</li>
+                  <li>Linguiça artesanal</li>
+                  <li>Tempero seco especial</li>
+                  <li>Carvão de madeira nativa</li>
+                </ul>
+                <a
+                  href="#contact"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Reserve já!"
+                >
+                  <button
+                    type="button"
+                    class="w-100 btn btn-lg btn-outline-primary"
+                  >
+                    R$265
+                    <small class="text-muted fw-light">Serve</small>
+
+                    <big>1</big>
+                    <small class="text-muted fw-light">Pessoa(s)</small>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Caviar de Cowboy -->
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <img
+                src="./assets/imgs/cowboy_caviar.jpg"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal pirata-one-regular">
+                  Caviar de Cowboy
+                </h4>
+                <h5
+                  class="ubuntu-mono-bold card-subtitle mb-2 text-body-secondary"
+                >
+                  Entrada
+                </h5>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title ubuntu-mono-regular">
+                  <small class="text-muted fw-light">Ingredientes:</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4 karma-regular">
+                  <li>Feijão preto</li>
+                  <li>Milho</li>
+                  <li>Tomate</li>
+                  <li>Pimentão</li>
+                  <li>Cebola roxa</li>
+                  <li>Coentro</li>
+                  <li>Molho vinagrete picante</li>
+                </ul>
+                <a
+                  href="#contact"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Reserve já!"
+                >
+                  <button
+                    type="button"
+                    class="w-100 btn btn-lg btn-outline-primary"
+                  >
+                    R$48
+                    <small class="text-muted fw-light">Serve</small>
+
+                    <big>1</big>
+                    <small class="text-muted fw-light">Pessoa(s)</small>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Frybread Tradicional -->
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <img
+                src="./assets/imgs/frybread.jpg"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal pirata-one-regular">
+                  Frybread Tradicional
+                </h4>
+                <h5
+                  class="ubuntu-mono-bold card-subtitle mb-2 text-body-secondary"
+                >
+                  Acompanhamento
+                </h5>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title ubuntu-mono-regular">
+                  <small class="text-muted fw-light">Ingredientes:</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4 karma-regular">
+                  <li>Farinha de trigo</li>
+                  <li>Fermento</li>
+                  <li>Sal</li>
+                  <li>Óleo para fritura</li>
+                  <li>Servido com mel ou geleia caseira</li>
+                </ul>
+                <a
+                  href="#contact"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Reserve já!"
+                >
+                  <button
+                    type="button"
+                    class="w-100 btn btn-lg btn-outline-primary"
+                  >
+                    R$32
+                    <small class="text-muted fw-light">Serve</small>
+
+                    <big>1</big>
+                    <small class="text-muted fw-light">Pessoa(s)</small>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Frito Pie Picante -->
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <img
+                src="./assets/imgs/fritopie.jpg"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal pirata-one-regular">
+                  Frito Pie Picante
+                </h4>
+                <h5
+                  class="ubuntu-mono-bold card-subtitle mb-2 text-body-secondary"
+                >
+                  Prato Principal
+                </h5>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title ubuntu-mono-regular">
+                  <small class="text-muted fw-light">Ingredientes:</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4 karma-regular">
+                  <li>Milho frito</li>
+                  <li>Chili con carne</li>
+                  <li>Queijo cheddar</li>
+                  <li>Cebola</li>
+                  <li>Pimenta jalapeño</li>
+                  <li>Creme azedo</li>
+                </ul>
+                <a
+                  href="#contact"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Reserve já!"
+                >
+                  <button
+                    type="button"
+                    class="w-100 btn btn-lg btn-outline-primary"
+                  >
+                    R$215
+                    <small class="text-muted fw-light">Serve</small>
+
+                    <big>1-2</big>
+                    <small class="text-muted fw-light">Pessoa(s)</small>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Pasta Salad Western -->
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <img
+                src="./assets/imgs/pasta_salad.jpg"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal pirata-one-regular">
+                  Pasta Salad Western
+                </h4>
+                <h5
+                  class="ubuntu-mono-bold card-subtitle mb-2 text-body-secondary"
+                >
+                  Acompanhamento
+                </h5>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title ubuntu-mono-regular">
+                  <small class="text-muted fw-light">Ingredientes:</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4 karma-regular">
+                  <li>Macarrão</li>
+                  <li>Maionese caseira</li>
+                  <li>Cenoura</li>
+                  <li>Ervilha</li>
+                  <li>Presunto defumado</li>
+                  <li>Temperos frescos</li>
+                </ul>
+                <a
+                  href="#contact"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Reserve já!"
+                >
+                  <button
+                    type="button"
+                    class="w-100 btn btn-lg btn-outline-primary"
+                  >
+                    R$190
+                    <small class="text-muted fw-light">Serve</small>
+
+                    <big>2-3</big>
+                    <small class="text-muted fw-light">Pessoa(s)</small>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Carne Seca do Ranch -->
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <img
+                src="./assets/imgs/dried_beef.jpg"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal pirata-one-regular">
+                  Carne Seca do Ranch
+                </h4>
+                <h5
+                  class="ubuntu-mono-bold card-subtitle mb-2 text-body-secondary"
+                >
+                  Petisco Premium
+                </h5>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title ubuntu-mono-regular">
+                  <small class="text-muted fw-light">Ingredientes:</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4 karma-regular">
+                  <li>Carne bovina premium</li>
+                  <li>Sal grosso</li>
+                  <li>Temperos secretos</li>
+                  <li>Defumada artesanalmente</li>
+                </ul>
+                <a
+                  href="#contact"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Reserve já!"
+                >
+                  <button
+                    type="button"
+                    class="w-100 btn btn-lg btn-outline-primary"
+                  >
+                    R$98
+                    <small class="text-muted fw-light">Serve</small>
+
+                    <big>1-2</big>
+                    <small class="text-muted fw-light">Pessoa(s)</small>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Fumaça do Pistoleiro (Whiskey da Casa) -->
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <img
+                src="./assets/imgs/wild_trest_whiskey.jpg"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal pirata-one-regular">Wild Trest</h4>
+                <h5
+                  class="ubuntu-mono-bold card-subtitle mb-2 text-body-secondary"
+                >
+                  Fumaça do Pistoleiro
+                </h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  Envelhecido em barris de carvalho e com alma de tiroteio ao
+                  pôr do sol, nosso whiskey tem sabor defumado, notas de
+                  baunilha amarga e um calor que desce como rajada de Colt.
+                  Ideal pra quem chega cansado da estrada e quer esquecer o dia
+                  — ou lembrar como ele começou.
+                </p>
+                <a
+                  href="#contact"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Reserve já!"
+                >
+                  <button
+                    type="button"
+                    class="w-100 btn btn-lg btn-outline-primary"
+                  >
+                    R$258
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Nin Javel -->
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <img
+                src="./assets/imgs/nin_javel_wine.jpg"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal pirata-one-regular">Nin Javel</h4>
+                <h5
+                  class="ubuntu-mono-bold card-subtitle mb-2 text-body-secondary"
+                >
+                  Sangue do Rancho
+                </h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  Vinho encorpado, com uvas amadurecidas sob o sol escaldante
+                  das pradarias. Traz no paladar frutas escuras, um toque de
+                  terra e uma pontinha de rebeldia. Servido em taça grossa, como
+                  manda o estilo da fronteira. Vai bem com silêncio e más
+                  intenções.
+                </p>
+                <a
+                  href="#contact"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Reserve já!"
+                >
+                  <button
+                    type="button"
+                    class="w-100 btn btn-lg btn-outline-primary"
+                  >
+                    R$158
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Trovão Doce -->
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <img
+                src="./assets/imgs/sarsaivilla_sarsaparailla.jpg"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal pirata-one-regular">Sarsaivilla</h4>
+                <h5
+                  class="ubuntu-mono-bold card-subtitle mb-2 text-body-secondary"
+                >
+                  Trovão Doce
+                </h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  Nosso refrigerante raiz, feito à moda antiga com extrato de
+                  salsaparrilha, baunilha e um segredo que só o velho cozinheiro
+                  conhece. Gelado na pedra e servido em copo grosso. A bebida
+                  preferida dos caçadores de recompensa de bom coração.
+                </p>
+                <a
+                  href="#contact"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Reserve já!"
+                >
+                  <button
+                    type="button"
+                    class="w-100 btn btn-lg btn-outline-primary"
+                  >
+                    R$18
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Gatilho Gelado -->
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <img
+                src="./assets/imgs/gin_sling.jpg"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal pirata-one-regular">
+                  Gin Sling do Saloon
+                </h4>
+                <h5
+                  class="ubuntu-mono-bold card-subtitle mb-2 text-body-secondary"
+                >
+                  Gatilho Gelado
+                </h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  Uma mistura traiçoeira de gin, limão e um toque de doçura,
+                  servida com gelo picado e uma rodela de laranja. O Gatilho
+                  Gelado é refrescante o suficiente pra enganar um xerife, mas
+                  forte o bastante pra derrubar um forasteiro. Rápido no gosto,
+                  lento na memória.
+                </p>
+                <a
+                  href="#contact"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Reserve já!"
+                >
+                  <button
+                    type="button"
+                    class="w-100 btn btn-lg btn-outline-primary"
+                  >
+                    R$32
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Brisa do Pântano -->
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <img
+                src="./assets/imgs/mint_julep.jpg"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal pirata-one-regular">
+                  Mint Julep Selvagem
+                </h4>
+                <h5
+                  class="ubuntu-mono-bold card-subtitle mb-2 text-body-secondary"
+                >
+                  Brisa do Pântano
+                </h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  Hortelã fresca, açúcar mascavo, bourbon suave e muito gelo
+                  batido — servido em caneco de lata. Essa bebida é pra quem
+                  quer refrescar a alma depois de encarar o sol do deserto. Sabe
+                  aquele gole que faz o chapéu levantar sozinho? É esse.
+                </p>
+                <a
+                  href="#contact"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Reserve já!"
+                >
+                  <button
+                    type="button"
+                    class="w-100 btn btn-lg btn-outline-primary"
+                  >
+                    R$38
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Espuma de Briga  -->
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <img
+                src="./assets/imgs/oalld_beer.jpg"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal pirata-one-regular">OALLD</h4>
+                <h5
+                  class="ubuntu-mono-bold card-subtitle mb-2 text-body-secondary"
+                >
+                  Espuma de Briga
+                </h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  Dourada, encorpada e com espuma espessa como a barba de um
+                  xerife. Fermentada aqui mesmo, atrás do balcão, com cevada das
+                  colinas e lúpulo bem humorado. Ideal pra celebrar vitórias...
+                  ou planejar vinganças.
+                </p>
+                <a
+                  href="#contact"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Reserve já!"
+                >
+                  <button
+                    type="button"
+                    class="w-100 btn btn-lg btn-outline-primary"
+                  >
+                    R$18
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- contato -->
+      <div class="container col-xl-10 col-xxl-8 px-4 py-5" id="contact">
+        <h2 class="pb-2 border-bottom text-center pirata-one-regular">
+          Faça já a sua Reserva
+        </h2>
+        <div class="row align-items-center g-lg-5 py-5">
+          <div class="col-lg-7 text-center text-lg-start">
+            <p class="fs-4 ubuntu-mono-regular">
+              Cavaleiro solitário ou comitiva barulhenta, todo mundo merece um
+              lugar no balcão.
+            </p>
+            <p class="karma-light mb-4">
+              Garanta sua mesa antes que a noite comece e o piano toque sua
+              primeira nota!
+            </p>
+
+            <ul class="list-unstyled karma-regular">
+              <li class="mb-3">
+                <strong>🕰️ Horários disponíveis:</strong>
+                <p class="mb-0">Do pôr do sol até o último gole</p>
+              </li>
+              <li class="mb-3">
+                <strong>📍 Localização:</strong>
+                <p class="mb-0">
+                  Bem no coração da cidade, onde as histórias viram lenda
+                </p>
+              </li>
+              <li class="mb-3">
+                <strong>🍽️ Reservas:</strong>
+                <p class="mb-0">
+                  Para refeições, drinques ou partidas na sala de jogos
+                </p>
+              </li>
+              <li>
+                <strong>🎉 Aceitamos:</strong>
+                <p class="mb-0">
+                  Reservas para aniversários, duelos amistosos e celebrações
+                  especiais
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-10 mx-auto col-lg-5">
+            <form id="formContato" class="p-4 p-md-5 border rounded-3 bg-light">
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="floatingName"
+                      placeholder="John Doe"
+                    />
+                    <label for="floatingName">Qual o nome do forasteiro?</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <div class="form-floating">
+                    <input type="date" class="form-control" id="floatingDate" />
+                    <label for="floatingDate">Quando?</label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="form-floating">
+                    <input type="time" class="form-control" id="floatingTime" />
+                    <label for="floatingTime">A que horas?</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <div class="form-floating">
+                    <input
+                      type="number"
+                      min="1"
+                      class="form-control"
+                      id="floatingCav"
+                      placeholder="1"
+                    />
+                    <label for="floatingCav">Cavaleiros?</label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="form-floating">
+                    <select
+                      class="form-select"
+                      id="floatingSpace"
+                      aria-label="Select an option"
+                    >
+                      <option selected>Onde?</option>
+                      <option value="bar">Bar</option>
+                      <option value="cozinha">Cozinha(jantar)</option>
+                      <option value="comum">Área Comum</option>
+                      <option value="jogos">Sala de Jogos</option>
+                    </select>
+                    <label for="floatingSpace">Espaço</label>
+                  </div>
+                </div>
+
+                <div class="col-md-12 mb-3">
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="floatingEmail"
+                      placeholder="name@example.com"
+                    />
+                    <label for="floatingEmail">Correspondência?</label>
+                  </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                  <div class="form-floating">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="floatingTel"
+                      name="floatingTel"
+                      placeholder="99 99999-9999"
+                    />
+                    <label for="floatingTel">Contato do Viajante?</label>
+                  </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                  <div class="form-floating">
+                    <textarea
+                      class="form-control"
+                      id="floatingTextarea"
+                      placeholder="Your message"
+                      style="height: 100px"
+                    ></textarea>
+                    <label for="floatingTextarea">Algum recado?</label>
+                  </div>
+                </div>
+              </div>
+              <button class="w-100 btn btn-lg btn-primary" type="submit">
+                Apertar o Gatilho
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- fim do main -->
+    </main>
+    <!-- footer -->
+    <footer class="container py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item">
+          <a href="#home" class="nav-link px-2 text-muted">Sobre Nós</a>
+        </li>
+        <li class="nav-item">
+          <a href="#features" class="nav-link px-2 text-muted">Porque?</a>
+        </li>
+        <li class="nav-item">
+          <a href="#pricing" class="nav-link px-2 text-muted">Cardápio</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link px-2 text-muted">Reservas</a>
+        </li>
+      </ul>
+      <p class="text-center text-muted">&copy; 2025 MySite, Inc</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js
+"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
