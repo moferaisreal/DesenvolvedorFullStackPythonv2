@@ -5,56 +5,65 @@
       "destination": "/EXERCICIOS/FRONT%20END/exercicio_modulo_13/index.html"
     },
     {
-      "source": "/modulo-13/:path*",
-      "destination": "/EXERCICIOS/FRONT%20END/exercicio_modulo_13/:path*"
-    },
-    {
       "source": "/modulo-12",
       "destination": "/EXERCICIOS/FRONT%20END/exercicio-modulo-12/index.html"
     },
     {
-      "source": "/modulo-12/:path*",
-      "destination": "/EXERCICIOS/FRONT%20END/exercicio-modulo-12/:path*"
-    },
-    {
       "source": "/modulo-11",
-      "destination": "/EXERCICIOS/FRONT-END/exercicio-modulo-11/index.html"
-    },
-    {
-      "source": "/modulo-11/:path*",
-      "destination": "/EXERCICIOS/FRONT%20END/exercicio-modulo-11/:path*"
+      "destination": "/EXERCICIOS/FRONT%20END/exercicio-modulo-11/index.html"
     },
     {
       "source": "/modulo-10",
       "destination": "/EXERCICIOS/FRONT%20END/exercicio-modulo-10/index.html"
     },
     {
-      "source": "/modulo-10/:path*",
-      "destination": "/EXERCICIOS/FRONT%20END/exercicio-modulo-10/:path*"
-    },
-    {
       "source": "/projeto-01",
       "destination": "/EXERCICIOS/FRONT%20END/projeto01/index.html"
-    },
-    {
-      "source": "/projeto-01/:path*",
-      "destination": "/EXERCICIOS/FRONT%20END/projeto01/:path*"
     },
     {
       "source": "/projeto-02",
       "destination": "/EXERCICIOS/FRONT%20END/projeto02/index.html"
     },
     {
-      "source": "/projeto-02/:path*",
-      "destination": "/EXERCICIOS/FRONT%20END/projeto02/:path*"
+      "source": "/jquery-exercicio",
+      "destination": "/EXERCICIOS/FRONT%20END/jquery-exercicio/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/modulo-13",
+      "destination": "/EXERCICIOS/FRONT%20END/exercicio_modulo_13/",
+      "permanent": false
+    },
+    {
+      "source": "/modulo-12",
+      "destination": "/EXERCICIOS/FRONT%20END/exercicio-modulo-12/",
+      "permanent": false
+    },
+    {
+      "source": "/modulo-11",
+      "destination": "/EXERCICIOS/FRONT%20END/exercicio-modulo-11/",
+      "permanent": false
+    },
+    {
+      "source": "/modulo-10",
+      "destination": "/EXERCICIOS/FRONT%20END/exercicio-modulo-10/",
+      "permanent": false
+    },
+    {
+      "source": "/projeto-01",
+      "destination": "/EXERCICIOS/FRONT%20END/projeto01/",
+      "permanent": false
+    },
+    {
+      "source": "/projeto-02",
+      "destination": "/EXERCICIOS/FRONT%20END/projeto02/",
+      "permanent": false
     },
     {
       "source": "/jquery-exercicio",
-      "destination": "/EXERCICIOS/FRONT%20END/jquery-exercicio/index.html"
-    },
-    {
-      "source": "/jquery-exercicio/:path*",
-      "destination": "/EXERCICIOS/FRONT%20END/jquery-exercicio/:path*"
+      "destination": "/EXERCICIOS/FRONT%20END/jquery-exercicio/",
+      "permanent": false
     }
   ]
 }
