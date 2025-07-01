@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    {
+      "source": "/modulo-13(/.*)?",
+      "destination": "/EXERCICIOS/FRONT END/exercicio-modulo-13/index.html"
+    },
+    {
+      "source": "/projeto01(/.*)?",
+      "destination": "/EXERCICIOS/FRONT END/projeto01/index.html"
+    },
+    {
+      "source": "/projeto02(/.*)?",
+      "destination": "/EXERCICIOS/FRONT END/projeto02/index.html"
+    },
+    {
+      "source": "/jquery-exercicio(/.*)?",
+      "destination": "/MATERIAL/FRONT END/jquery/modulo_9_estrutura_inicial/index.html"
+    }
+  ]
+}
