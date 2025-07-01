@@ -1,88 +1,233 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meus Projetos de Programação</title>
+    <title>My Project Portfolio</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
+      /* Use the Inter font */
       body {
-        font-family: sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-      }
-      .container {
-        background-color: #fff;
-        padding: 30px;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        width: 80%;
-        max-width: 800px;
-      }
-      h1 {
-        color: #333;
-        text-align: center;
-        margin-bottom: 20px;
-      }
-      ul {
-        list-style: none;
-        padding: 0;
-      }
-      li {
-        background-color: #eee;
-        margin-bottom: 10px;
-        border-radius: 5px;
-      }
-      a {
-        display: block;
-        padding: 15px;
-        text-decoration: none;
-        color: #333;
-        font-weight: bold;
-        transition: background-color 0.3s ease;
-      }
-      a:hover {
-        background-color: #ddd;
+        font-family: "Inter", sans-serif;
       }
     </style>
   </head>
-  <body>
-    <div class="container">
-      <h1>Meus Projetos</h1>
-      <ul>
-        <li>
-          <a
-            href="conteudo/0. CURSO EM VIDEO/1. HTML-CSS/exercicios/ex001/index.html"
-            target="_blank"
-            >HTML & CSS - Exercício 1</a
-          >
-        </li>
-        <li>
-          <a
-            href="conteudo/0. CURSO EM VIDEO/1. HTML-CSS/exercicios/ex002/index.html"
-            target="_blank"
-            >HTML & CSS - Exercício 2</a
-          >
-        </li>
-        <li>
-          <a
-            href="conteudo/0. CURSO EM VIDEO/1. HTML-CSS/exercicios/ex003/index.html"
-            target="_blank"
-            >HTML & CSS - Exercício 3</a
-          >
-        </li>
-        <li>
-          <a
-            href="conteudo/1. JAVASCRIPT/1. CURSO EM VIDEO/exercicios/ex001/index.html"
-            target="_blank"
-            >JavaScript - Exercício 1</a
-          >
-        </li>
-      </ul>
+  <body class="bg-gray-900 text-white">
+    <!-- Main Container -->
+    <div class="container mx-auto px-6 py-12">
+      <!-- Header Section -->
+      <header class="text-center mb-12">
+        <h1 class="text-5xl font-bold mb-2 text-blue-400">
+          My Frontend Projects
+        </h1>
+        <p class="text-lg text-gray-400">
+          A collection of exercises and projects from my course.
+        </p>
+      </header>
+
+      <!-- Projects Grid -->
+      <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card for Project: Módulo 13 -->
+        <a
+          href="/modulo-13"
+          class="block p-8 bg-gray-800 rounded-xl border border-gray-700 hover:border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1"
+        >
+          <div class="flex items-center mb-4">
+            <!-- Icon -->
+            <svg
+              class="w-8 h-8 mr-4 text-blue-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+              ></path>
+            </svg>
+            <h3 class="text-2xl font-bold">Módulo 13: Bootstrap Avançado</h3>
+          </div>
+          <p class="text-gray-400">
+            Advanced techniques and components using the Bootstrap framework.
+          </p>
+        </a>
+
+        <!-- Card for Project: Módulo 12 -->
+        <a
+          href="/modulo-12"
+          class="block p-8 bg-gray-800 rounded-xl border border-gray-700 hover:border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1"
+        >
+          <div class="flex items-center mb-4">
+            <svg
+              class="w-8 h-8 mr-4 text-blue-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+              ></path>
+            </svg>
+            <h3 class="text-2xl font-bold">Módulo 12: Bootstrap</h3>
+          </div>
+          <p class="text-gray-400">
+            Introduction to Bootstrap framework and responsive design
+            components.
+          </p>
+        </a>
+
+        <!-- Card for Project: Módulo 11 -->
+        <a
+          href="/modulo-11"
+          class="block p-8 bg-gray-800 rounded-xl border border-gray-700 hover:border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1"
+        >
+          <div class="flex items-center mb-4">
+            <svg
+              class="w-8 h-8 mr-4 text-blue-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM7 3H5a2 2 0 00-2 2v12a4 4 0 004 4h2M9 3h6a2 2 0 012 2v12a4 4 0 01-4 4h-6m0-18v18"
+              ></path>
+            </svg>
+            <h3 class="text-2xl font-bold">Módulo 11: Sass</h3>
+          </div>
+          <p class="text-gray-400">
+            Advanced CSS with Sass preprocessor, variables and mixins.
+          </p>
+        </a>
+
+        <!-- Card for Project: Módulo 10 -->
+        <a
+          href="/modulo-10"
+          class="block p-8 bg-gray-800 rounded-xl border border-gray-700 hover:border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1"
+        >
+          <div class="flex items-center mb-4">
+            <svg
+              class="w-8 h-8 mr-4 text-blue-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"
+              ></path>
+            </svg>
+            <h3 class="text-2xl font-bold">Módulo 10: Less</h3>
+          </div>
+          <p class="text-gray-400">
+            CSS preprocessing with Less, dynamic stylesheets and functions.
+          </p>
+        </a>
+
+        <!-- Card for Project: Projeto 01 -->
+        <a
+          href="/projeto-01"
+          class="block p-8 bg-gray-800 rounded-xl border border-gray-700 hover:border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1"
+        >
+          <div class="flex items-center mb-4">
+            <svg
+              class="w-8 h-8 mr-4 text-blue-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              ></path>
+            </svg>
+            <h3 class="text-2xl font-bold">Projeto 01</h3>
+          </div>
+          <p class="text-gray-400">
+            The first major project, demonstrating foundational HTML and CSS
+            skills.
+          </p>
+        </a>
+
+        <!-- Card for Project: Projeto 02 -->
+        <a
+          href="/projeto-02"
+          class="block p-8 bg-gray-800 rounded-xl border border-gray-700 hover:border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1"
+        >
+          <div class="flex items-center mb-4">
+            <svg
+              class="w-8 h-8 mr-4 text-blue-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              ></path>
+            </svg>
+            <h3 class="text-2xl font-bold">Projeto 02</h3>
+          </div>
+          <p class="text-gray-400">
+            The second major project, incorporating more complex layouts and
+            JavaScript.
+          </p>
+        </a>
+
+        <!-- Card for Project: JQuery -->
+        <a
+          href="/jquery-exercicio"
+          class="block p-8 bg-gray-800 rounded-xl border border-gray-700 hover:border-blue-500 hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1"
+        >
+          <div class="flex items-center mb-4">
+            <svg
+              class="w-8 h-8 mr-4 text-blue-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+              ></path>
+            </svg>
+            <h3 class="text-2xl font-bold">Exercício: jQuery</h3>
+          </div>
+          <p class="text-gray-400">
+            An exercise focused on DOM manipulation and events using jQuery.
+          </p>
+        </a>
+      </main>
     </div>
   </body>
 </html>
