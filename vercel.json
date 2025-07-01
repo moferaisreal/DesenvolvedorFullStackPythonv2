@@ -2,19 +2,19 @@
   "rewrites": [
     {
       "source": "/modulo-13",
-      "destination": "/EXERCICIOS/FRONT-END/exercicio-modulo-13/index.html"
+      "destination": "/EXERCICIOS/FRONT%20END/exercicio_modulo_13/index.html"
     },
     {
       "source": "/modulo-13/:path*",
-      "destination": "/EXERCICIOS/FRONT-END/exercicio-modulo-13/:path*"
+      "destination": "/EXERCICIOS/FRONT%20END/exercicio_modulo_13/:path*"
     },
     {
       "source": "/modulo-12",
-      "destination": "/EXERCICIOS/FRONT-END/exercicio-modulo-12/index.html"
+      "destination": "/EXERCICIOS/FRONT%20END/exercicio-modulo-12/index.html"
     },
     {
       "source": "/modulo-12/:path*",
-      "destination": "/EXERCICIOS/FRONT-END/exercicio-modulo-12/:path*"
+      "destination": "/EXERCICIOS/FRONT%20END/exercicio-modulo-12/:path*"
     },
     {
       "source": "/modulo-11",
