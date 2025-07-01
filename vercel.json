@@ -23,9 +23,6 @@
     {
       "source": "/projeto02(/.*)?",
       "destination": "/EXERCICIOS/FRONT END/projeto02/index.html"
-    },
-    {
-      "source": ""
     }
   ]
 }
