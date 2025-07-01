@@ -1,12 +1,52 @@
 {
   "rewrites": [
     {
+      "source": "/modulo-13",
+      "destination": "/EXERCICIOS/FRONT-END/exercicio-modulo-13/index.html"
+    },
+    {
+      "source": "/modulo-13/:path*",
+      "destination": "/EXERCICIOS/FRONT-END/exercicio-modulo-13/:path*"
+    },
+    {
       "source": "/modulo-12",
-      "destination": "/EXERCICIOS/FRONT%20END/exercicio-modulo-12/index.html"
+      "destination": "/EXERCICIOS/FRONT-END/exercicio-modulo-12/index.html"
     },
     {
       "source": "/modulo-12/:path*",
-      "destination": "/EXERCICIOS/FRONT%20END/exercicio-modulo-12/:path*"
+      "destination": "/EXERCICIOS/FRONT-END/exercicio-modulo-12/:path*"
+    },
+    {
+      "source": "/modulo-11",
+      "destination": "/EXERCICIOS/FRONT-END/exercicio-modulo-11/index.html"
+    },
+    {
+      "source": "/modulo-11/:path*",
+      "destination": "/EXERCICIOS/FRONT-END/exercicio-modulo-11/:path*"
+    },
+    {
+      "source": "/modulo-10",
+      "destination": "/EXERCICIOS/FRONT-END/exercicio-modulo-10/index.html"
+    },
+    {
+      "source": "/modulo-10/:path*",
+      "destination": "/EXERCICIOS/FRONT-END/exercicio-modulo-10/:path*"
+    },
+    {
+      "source": "/projeto01",
+      "destination": "/EXERCICIOS/FRONT-END/projeto01/index.html"
+    },
+    {
+      "source": "/projeto01/:path*",
+      "destination": "/EXERCICIOS/FRONT-END/projeto01/:path*"
+    },
+    {
+      "source": "/projeto02",
+      "destination": "/EXERCICIOS/FRONT-END/projeto02/index.html"
+    },
+    {
+      "source": "/projeto02/:path*",
+      "destination": "/EXERCICIOS/FRONT-END/projeto02/:path*"
     }
   ]
 }
