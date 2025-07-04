@@ -27,9 +27,18 @@
     {
       "source": "/jquery-exercicio",
       "destination": "/EXERCICIOS/FRONT%20END/jquery-exercicio/index.html"
+    },
+    {
+      "source": "/projeto03",
+      "destination": "/EXERCICIOS/FRONT%20END/projeto_03/index.html"
     }
   ],
   "redirects": [
+    {
+      "source": "/projeto03",
+      "destination": "/EXERCICIOS/FRONT%20END/projeto_03",
+      "permanent": false
+    },
     {
       "source": "/modulo-13",
       "destination": "/EXERCICIOS/FRONT%20END/exercicio_modulo_13/",
