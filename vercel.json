@@ -5,74 +5,64 @@
       "destination": "/EXERCICIOS/FRONT%20END/exercicio_modulo_13/index.html"
     },
     {
+      "source": "/modulo-13/(.*)",
+      "destination": "/EXERCICIOS/FRONT%20END/exercicio_modulo_13/$1"
+    },
+    {
       "source": "/modulo-12",
       "destination": "/EXERCICIOS/FRONT%20END/exercicio-modulo-12/index.html"
+    },
+    {
+      "source": "/modulo-12/(.*)",
+      "destination": "/EXERCICIOS/FRONT%20END/exercicio-modulo-12/$1"
     },
     {
       "source": "/modulo-11",
       "destination": "/EXERCICIOS/FRONT%20END/exercicio-modulo-11/index.html"
     },
     {
+      "source": "/modulo-11/(.*)",
+      "destination": "/EXERCICIOS/FRONT%20END/exercicio-modulo-11/$1"
+    },
+    {
       "source": "/modulo-10",
       "destination": "/EXERCICIOS/FRONT%20END/exercicio-modulo-10/index.html"
+    },
+    {
+      "source": "/modulo-10/(.*)",
+      "destination": "/EXERCICIOS/FRONT%20END/exercicio-modulo-10/$1"
     },
     {
       "source": "/projeto-01",
       "destination": "/EXERCICIOS/FRONT%20END/projeto01/index.html"
     },
     {
+      "source": "/projeto-01/(.*)",
+      "destination": "/EXERCICIOS/FRONT%20END/projeto01/$1"
+    },
+    {
       "source": "/projeto-02",
       "destination": "/EXERCICIOS/FRONT%20END/projeto02/index.html"
+    },
+    {
+      "source": "/projeto-02/(.*)",
+      "destination": "/EXERCICIOS/FRONT%20END/projeto02/$1"
     },
     {
       "source": "/jquery-exercicio",
       "destination": "/EXERCICIOS/FRONT%20END/jquery-exercicio/index.html"
     },
     {
+      "source": "/jquery-exercicio/(.*)",
+      "destination": "/EXERCICIOS/FRONT%20END/jquery-exercicio/$1"
+    },
+    {
       "source": "/projeto03",
       "destination": "/EXERCICIOS/FRONT%20END/projeto_03/index.html"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/projeto03",
-      "destination": "/EXERCICIOS/FRONT%20END/projeto_03",
-      "permanent": false
     },
     {
-      "source": "/modulo-13",
-      "destination": "/EXERCICIOS/FRONT%20END/exercicio_modulo_13/",
-      "permanent": false
-    },
-    {
-      "source": "/modulo-12",
-      "destination": "/EXERCICIOS/FRONT%20END/exercicio-modulo-12/",
-      "permanent": false
-    },
-    {
-      "source": "/modulo-11",
-      "destination": "/EXERCICIOS/FRONT%20END/exercicio-modulo-11/",
-      "permanent": false
-    },
-    {
-      "source": "/modulo-10",
-      "destination": "/EXERCICIOS/FRONT%20END/exercicio-modulo-10/",
-      "permanent": false
-    },
-    {
-      "source": "/projeto-01",
-      "destination": "/EXERCICIOS/FRONT%20END/projeto01/",
-      "permanent": false
-    },
-    {
-      "source": "/projeto-02",
-      "destination": "/EXERCICIOS/FRONT%20END/projeto02/",
-      "permanent": false
-    },
-    {
-      "source": "/jquery-exercicio",
-      "destination": "/EXERCICIOS/FRONT%20END/jquery-exercicio/",
-      "permanent": false
+      "source": "/projeto03/(.*)",
+      "destination": "/EXERCICIOS/FRONT%20END/projeto_03/$1"
     }
   ]
 }
