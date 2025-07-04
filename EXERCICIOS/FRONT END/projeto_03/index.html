@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Zen+Dots&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grap Miniatures - Sua Loja de miniaturas</title>
+  </head>
+  <body>
+    <header id="cabecalho" class="sticky-top">
+      <nav class="navbar navbar-expand-lg p-2">
+        <div class="container-fluid">
+          <h1 class="navbar-brand pb-3 fs-3 zen">Minaturas Grap</h1>
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuNavegacao"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="menuNavegacao"
+          >
+            <ul class="nav navbar-nav nav-pills d-block d-md-flex">
+              <li class="nav-item fw-bold">
+                <a class="nav-link" href="#sobre"
+                  ><i class="bi bi-house-door me-1"></i>Sobre Nós</a
+                >
+              </li>
+              <li class="nav-item fw-bold">
+                <a class="nav-link" href="#eventos"
+                  ><i class="bi bi-calendar3 me-1"></i>Eventos</a
+                >
+              </li>
+              <li class="nav-item fw-bold">
+                <a class="nav-link" href="#loja"
+                  ><i class="bi bi-cart-check me-1"></i>Loja</a
+                >
+              </li>
+              <li class="nav-item fw-bold">
+                <a class="nav-link" href="#contato"
+                  ><i class="bi bi-chat-dots me-1"></i>Fale conosco</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div
+      data-bs-spy="scroll"
+      data-bs-smooth-scoll="true"
+      data-bs-target="cabecalho"
+    >
+      <section id="sobre" class="textNonColored">
+        <div class="carousel slide" data-bs-ride="carousel" id="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3500">
+              <img
+                class="d-block w-100"
+                src="./images/exercicio/carouselimg1.jpg "
+                alt="Guerra na terra"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="3500">
+              <img
+                class="d-block w-100"
+                src="./images/exercicio/carouselimg2.jpg"
+                alt="Guerra no mar"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="3500">
+              <img
+                class="d-block w-100"
+                src="./images/exercicio/carouselimg3.jpg"
+                alt="Guerra no ar"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              class="active"
+              data-bs-target="#carousel"
+              data-bs-slide-to="0"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="2"
+            ></button>
+          </div>
+        </div>
+        <div class="pt-5 pb-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5">
+                <img
+                  src="./images/exercicio/storefront.jpg"
+                  alt="Espaço Interno"
+                  class="d-block w-100 rounded"
+                />
+              </div>
+
+              <div class="col-md-7 mt-3 mt-md-0">
+                <h2 class="zen">
+                  Bem-vindo à <span class="textColored">Grap</span>
+                </h2>
+                <p>
+                  Seu refúgio definitivo para tudo sobre o universo das
+                  miniaturas. Mergulhe em nossa vasta coleção de heróis,
+                  monstros, exércitos e naves dos mais diversos mundos da
+                  fantasia e ficção científica. Seja você um pintor experiente,
+                  um colecionador apaixonado ou um comandante pronto para a
+                  guerra, aqui você encontrará as miniaturas perfeitas para seus
+                  projetos e as melhores ferramentas e tintas para dar vida a
+                  elas. Junte-se à nossa comunidade, explore novos universos e
+                  prepare-se para a batalha!
+                </p>
+                <h3 class="zen">
+                  Como é o<span class="textColored"> Espaço de Batalhas</span>
+                </h3>
+                <p>
+                  Nosso campo de batalha espera por você! Equipado com mesas
+                  temáticas e uma grande variedade de terrenos, nosso espaço é o
+                  local ideal para travar duelos épicos, participar de torneios
+                  emocionantes ou simplesmente aprender um novo jogo. Reúna seus
+                  exércitos, desafie seus amigos e que rolem os dados!
+                </p>
+                <ul>
+                  <li>Batalha Terrestre</li>
+                  <li>Batalha Aérea</li>
+                  <li>Batalha Maritima</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="eventos" class="pt-5 pb-5">
+        <div class="container">
+          <div class="row">
+            <h2 class="text-center">
+              A <span class="zen textColored">BATALHA</span> QUE VOCÊ SEMPRE
+              QUIS JOGAR!!!
+            </h2>
+          </div>
+          <div class="row mt-4">
+            <div class="col-md-4">
+              <img
+                src="./images/exercicio/aboutimg1.jpg"
+                class="d-block w-100 rounded mb-2"
+                alt=""
+              />
+              <h3 class="fs-4">
+                <i class="bi bi-bar-chart-fill fs-3 pe-3"></i>O Grande Torneio:
+                <span class="textColored zen">"Campeões da Grap"</span>
+              </h3>
+              <p>
+                Um torneio de um dia de um dos jogos mais populares, como
+                Warhammer 40,000, Age of Sigmar. O evento tem rodadas suíças,
+                com pontuação baseada em vitórias e objetivos de missão.
+              </p>
+              <ul>
+                <li>
+                  Vales-compra na loja para os primeiros colocados. Um troféu
+                  para o grande campeão.
+                </li>
+                <li>"Prêmio de "Melhor Exército Pintado"</li>
+                <li>Batalha de Titãs: O Grande Torneio</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <img
+                src="./images/exercicio/aboutimg2.jpg"
+                class="d-block w-100 rounded mb-2"
+                alt=""
+              />
+              <h3 class="fs-4">
+                <i class="bi bi-brush-fill fs-3"></i> A Oficina Criativa:
+                <span class="zen textColored">"Arsenal do Pintor"</span>
+              </h3>
+              <p>
+                Este evento é focado na parte artística e de customização do
+                hobby, atraindo tanto novatos que querem aprender quanto
+                veteranos que buscam aprimorar suas técnicas.
+              </p>
+              <ul>
+                <li>Instrutor Convidado workshop com pintor local.</li>
+                <li>
+                  Exposição dos Vencedores - miniaturas vencedoras ficam
+                  exposição em uma vitrine especial na loja por uma semana.
+                </li>
+                <li>
+                  Tema Específico concurso com "kit de pintura" com desconto
+                  especial.
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <img
+                src="./images/exercicio/aboutimg3.jpg"
+                class="d-block w-100 rounded mb-2"
+                alt=""
+              />
+
+              <h3 class="fs-4">
+                <i class="bi bi-people-fill fs-3"></i> O Dia do Recrutamento:
+                <span class="zen textColored">"Descubra um Novo Universo"</span>
+              </h3>
+              <p>
+                Um dia de jogos demonstrativos e gratuitos. As mesas de batalha
+                ficam montadas com exércitos e warbands já prontos e pintados,
+                representando diferentes jogos (ex: Kill Team, Warcry, Marvel:
+                Crisis Protocol). A equipe da loja e voluntários experientes
+                atuam como "professores", guiando partidas rápidas e explicando
+                as regras básicas.
+              </p>
+              <ul>
+                <li>Jogue de graça com tudo pronto</li>
+                <li>Traga seus amigos e família</li>
+                <li>
+                  "Desconto para "Recrutas": Desconto especial e exclusivo para
+                  quem participar do evento e decidir comprar seu primeiro
+                  produto no mesmo dia.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="loja" class="pt-5 pb-5">
+        <div class="container">
+          <div class="row">
+            <h2 class="text-center">
+              Conheça nossa <span class="zen textColored">Loja</span>
+            </h2>
+          </div>
+          <div class="row">
+            <aside class="col-md-2 navLoja">
+              <h2 class="textColored zen">Jogos</h2>
+              <nav class="nav nav-pills flex-column">
+                <button
+                  type="button"
+                  data-bs-toggle="tab"
+                  data-bs-target="#warhammer40k"
+                  class="nav-link fw-bold text-start active"
+                >
+                  <span> Warhammer 40K </span>
+                </button>
+                <button
+                  type="button"
+                  data-bs-toggle="tab"
+                  data-bs-target="#starWars"
+                  class="nav-link fw-bold text-start"
+                >
+                  <span>Star Wars:Legion</span>
+                </button>
+                <button
+                  type="button"
+                  data-bs-toggle="tab"
+                  data-bs-target="#dungeonsDragons"
+                  class="nav-link fw-bold text-start"
+                >
+                  <span> Dungeons & Dragons</span>
+                </button>
+                <button
+                  type="button"
+                  data-bs-toggle="tab"
+                  data-bs-target="#middleEarth"
+                  class="nav-link fw-bold text-start"
+                >
+                  <span>Middle Earth</span>
+                </button>
+              </nav>
+            </aside>
+            <div class="col-md-10">
+              <h2 class="zen textColored">Itens</h2>
+              <div class="tab-content">
+                <div class="tab-pane active" id="warhammer40k">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.warhammer.com/app/resources/catalog/product/920x950/99070101018_SpaceWolvesIronPriest01.jpg?fm=webp&w=920&h=948"
+                        class="d-block w-100"
+                        alt="Iron Priest"
+                      />
+                      <h5 class="textColored fw-bold mt-2">Iron Priest</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.warhammer.com/app/resources/catalog/product/920x950/99120101439_SpaceWolvesArjacRockfist1.jpg?fm=webp&w=920&h=948"
+                        class="d-block w-100"
+                        alt="Arjac Rockfist"
+                      />
+                      <h5 class="textColored fw-bold mt-2">Arjac Rockfist</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.warhammer.com/app/resources/catalog/product/920x950/99120101440_SpaceWolvesNjalStormcaller1.jpg?fm=webp&w=920&h=948"
+                        class="d-block w-100"
+                        alt="Njal Stormcaller"
+                      />
+                      <h5 class="textColored fw-bold mt-2">Njal Stormcaller</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.warhammer.com/app/resources/catalog/product/920x950/99120101436_SpaceWolvesWolfGuardBattleLeader1.jpg?fm=webp&w=920&h=948"
+                        class="d-block w-100"
+                        alt="Wolf Guard Battle Leader"
+                      />
+                      <h5 class="textColored fw-bold mt-2">
+                        Wolf Guard Battle Leader
+                      </h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.warhammer.com/app/resources/catalog/product/920x950/99120101435_SpaceWolvesWolfPriest1.jpg?fm=webp&w=920&h=948"
+                        class="d-block w-100"
+                        alt="Wolf Priest"
+                      />
+                      <h5 class="textColored fw-bold mt-2">Wolf Priest</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.warhammer.com/app/resources/catalog/product/920x950/99120101438_SpaceWolvesLoganGrimnar1.jpg?fm=webp&w=920&h=948"
+                        class="d-block w-100"
+                        alt="Logan Grimnar"
+                      />
+                      <h5 class="textColored fw-bold mt-2">Logan Grimnar</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="starWars">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <img
+                        src="https://cdn.svc.asmodee.net/production-amgcom/uploads/image-converter/2022/06/SWL67-image3@500-1-e1677367403120.webp"
+                        class="d-block w-100"
+                        alt="Cad Bane"
+                      />
+                      <h5 class="textColored fw-bold mt-2">Cad Bane</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+
+                    <div class="col-md-3">
+                      <img
+                        src="https://cdn.svc.asmodee.net/production-amgcom/uploads/image-converter/2022/06/SWL71-image3@500-1-e1677367720319.webp"
+                        class="d-block w-100"
+                        alt="Republic AT-RT"
+                      />
+                      <h5 class="textColored fw-bold mt-2">Republic AT-RT</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="https://cdn.svc.asmodee.net/production-amgcom/uploads/image-converter/2022/06/SWL80-image3@500-1.webp"
+                        class="d-block w-100"
+                        alt="Agent Kallus"
+                      />
+                      <h5 class="textColored fw-bold mt-2">Agent Kallus</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+
+                    <div class="col-md-3">
+                      <img
+                        src="https://cdn.svc.asmodee.net/production-amgcom/uploads/image-converter/2022/06/SWL82_Yoda2.webp"
+                        class="d-block w-100"
+                        alt="Grand Master Yoda"
+                      />
+                      <h5 class="textColored fw-bold mt-2">
+                        Grand Master Yoda
+                      </h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="https://cdn.svc.asmodee.net/production-amgcom/uploads/image-converter/2022/06/SWL81-image3@500-1.webp"
+                        class="d-block w-100"
+                        alt="LAAT/le Patrol Transport"
+                      />
+                      <h5 class="textColored fw-bold mt-2">
+                        LAAT/le Patrol Transport
+                      </h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+
+                    <div class="col-md-3">
+                      <img
+                        src="https://cdn.svc.asmodee.net/production-amgcom/uploads/image-converter/2022/06/SWL66-image3@500-1-e1677367277872.webp"
+                        class="d-block w-100"
+                        alt="Padmé Amidala "
+                      />
+                      <h5 class="textColored fw-bold mt-2">Padmé Amidala</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="dungeonsDragons">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.dndmini.com/cdn/shop/files/anthradusk-webressdrender_1024x1024.jpg?v=1750968791"
+                        class="d-block w-100"
+                        alt="Anthradusk, Ancient Blue Dragon"
+                      />
+                      <h5 class="textColored fw-bold mt-2">
+                        Anthradusk, Ancient Blue Dragon
+                      </h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.dndmini.com/cdn/shop/files/96320_wb_5_1024x1024.jpg?v=1746464936"
+                        class="d-block w-100"
+                        alt="Adult Black Dragon"
+                      />
+                      <h5 class="textColored fw-bold mt-2">
+                        Adult Black Dragon
+                      </h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.dndmini.com/cdn/shop/files/93038_1024x1024.jpg?v=1722530620"
+                        class="d-block w-100"
+                        alt="Gnome Wizard"
+                      />
+                      <h5 class="textColored fw-bold mt-2">Gnome Wizard</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.dndmini.com/cdn/shop/files/dnd-iotr-gargantuantiamat12_1024x1024.jpg?v=1736439740"
+                        class="d-block w-100"
+                        alt="Gargantua Tiamat"
+                      />
+                      <h5 class="textColored fw-bold mt-2">Gargantua Tiamat</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.dndmini.com/cdn/shop/files/orcus26_1024x1024.jpg?v=1722532154"
+                        class="d-block w-100"
+                        alt="Wand of Orcus"
+                      />
+                      <h5 class="textColored fw-bold mt-2">Wand of Orcus</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.dndmini.com/cdn/shop/files/dnd-classic-githyankistatue5_1024x1024.jpg?v=1722531065"
+                        class="d-block w-100"
+                        alt="Githyanki "
+                      />
+                      <h5 class="textColored fw-bold mt-2">Githyanki</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="middleEarth">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.warhammer.com/app/resources/catalog/product/920x950/99861499019_MEBeechboneTheEnt01.jpg?fm=webp&w=920&h=948"
+                        class="d-block w-100"
+                        alt="Beechbone™ the Ent™
+"
+                      />
+                      <h5 class="textColored fw-bold mt-2">
+                        Beechbone™ the Ent™
+                      </h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.warhammer.com/app/resources/catalog/product/920x950/99061462088_MEDruzhagDurburzGoblinsOfMoria01.jpg?fm=webp&w=920&h=948"
+                        class="d-block w-100"
+                        alt="Durbûrz™ & Drûzhag™, Goblins of Moria™"
+                      />
+                      <h5 class="textColored fw-bold mt-2">
+                        Durbûrz™ & Drûzhag™, Goblins of Moria™
+                      </h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.warhammer.com/app/resources/catalog/product/920x950/99861464040_MECorsairsOfUmbarBallista01.jpg?fm=webp&w=920&h=948"
+                        class="d-block w-100"
+                        alt="Corsairs of Umbar™ Ballista
+"
+                      />
+                      <h5 class="textColored fw-bold mt-2">
+                        Corsairs of Umbar™ Ballista
+                      </h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.warhammer.com/app/resources/catalog/product/920x950/99061462086_MEMordorSiegeBow01.jpg?fm=webp&w=920&h=948"
+                        class="d-block w-100"
+                        alt="Mordor™ Siege Bow
+"
+                      />
+                      <h5 class="textColored fw-bold mt-2">
+                        Mordor™ Siege Bow
+                      </h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.warhammer.com/app/resources/catalog/product/920x950/99121462025_BolgSpawnOfAzog1.jpg?fm=webp&w=920&h=948"
+                        class="d-block w-100"
+                        alt="Bolg™, Spawn of Azog™"
+                      />
+                      <h5 class="textColored fw-bold mt-2">
+                        Bolg™, Spawn of Azog™
+                      </h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.warhammer.com/app/resources/catalog/product/920x950/99121464034_PrinceImrahilofDolAmroth1.jpg?fm=webp&w=920&h=948"
+                        class="d-block w-100"
+                        alt="Prince Imrahil™ of Dol Amroth™
+"
+                      />
+                      <h5 class="textColored fw-bold mt-2">
+                        Prince Imrahil™ of Dol Amroth™
+                      </h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.warhammer.com/app/resources/catalog/product/920x950/99121464040_HeraDaughterofHelm1.jpg?fm=webp&w=920&h=948"
+                        class="d-block w-100"
+                        alt="Héra™ Daughter of Helm™
+"
+                      />
+                      <h5 class="textColored fw-bold mt-2">
+                        Héra™ Daughter of Helm™
+                      </h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.warhammer.com/app/resources/catalog/product/920x950/99121464031_MEFaramirMadrilDamrod04.jpg?fm=webp&w=920&h=948"
+                        class="d-block w-100"
+                        alt="Faramir™, Madril and Damrod, Rangers of Ithilien™"
+                      />
+                      <h5 class="textColored fw-bold mt-2">
+                        Faramir™, Madril and Damrod, Rangers of Ithilien™
+                      </h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.warhammer.com/app/resources/catalog/product/920x950/99811466025_MiddleEarthCaveDrakeCharacter1.jpg?fm=webp&w=920&h=948"
+                        class="d-block w-100"
+                        alt="Cave Drake
+"
+                      />
+                      <h5 class="textColored fw-bold mt-2">Cave Drake</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.warhammer.com/app/resources/catalog/product/920x950/99811466024_MiddleEarthDragonCharacter1.jpg?fm=webp&w=920&h=948"
+                        class="d-block w-100"
+                        alt="Dragon"
+                      />
+                      <h5 class="textColored fw-bold mt-2">Dragon</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.warhammer.com/app/resources/catalog/product/920x950/99801465022_MiddleEarthDwarfBallistaRegiment1.jpg?fm=webp&w=920&h=948"
+                        class="d-block w-100"
+                        alt="Khazad-dûm™ Dwarven Ballista
+"
+                      />
+                      <h5 class="textColored fw-bold mt-2">
+                        Khazad-dûm™ Dwarven Ballista
+                      </h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="https://www.warhammer.com/app/resources/catalog/product/920x950/99061464238_MEBeregond01.jpg?fm=webp&w=920&h=948"
+                        class="d-block w-100"
+                        alt="Beregond™, Guard of the Citadel
+"
+                      />
+                      <h5 class="textColored fw-bold mt-2">
+                        Beregond™, Guard of the Citadel
+                      </h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contato" class="pt-5 pb-5">
+        <div class="container">
+          <div class="row">
+            <h2 class="section-tile text-center">
+              Fale <span class="textColored">Conosco</span>
+            </h2>
+          </div>
+          <div class="row">
+            <div class="col-md-7 mb-5">
+              <form id="form-contato">
+                <div class="mb-3">
+                  <label for="nome" class="form-label textColored fw-bold"
+                    >Seu nome</label
+                  >
+                  <input
+                    type="text"
+                    name="nome"
+                    id="nome"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label textColored fw-bold"
+                    >Seu E-Mail</label
+                  >
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="telefone" class="form-label textColored fw-bold"
+                    >Telefone (opcional)</label
+                  >
+                  <input
+                    type="tel"
+                    name="telefone"
+                    id="telefone"
+                    class="form-control"
+                    placeholder="(00) 00000-0000"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="mensagem" class="form-label textColored fw-bold"
+                    >Sua mensagem</label
+                  >
+                  <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    class="form-control"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn fw-bold">Enviar</button>
+              </form>
+            </div>
+            <div class="col-md-5">
+              <div class="row">
+                <h3 class="section-tile fs-4 textColored">
+                  <i class="bi bi-hand-thumbs-up-fill"></i> Siga-nos
+                </h3>
+                <ul class="socialLinks">
+                  <li class="fs-5">
+                    <a href="#"><i class="textColored bi bi-facebook"></i></a>
+                  </li>
+                  <li class="fs-5 ms-1 me-1">
+                    <a href="#"><i class="textColored bi bi-whatsapp"></i></a>
+                  </li>
+                  <li class="fs-5">
+                    <a href="#"><i class="textColored bi bi-instagram"></i></a>
+                  </li>
+                  <li class="fs-5">
+                    <a href="#"><i class="textColored bi bi-tiktok"></i></a>
+                  </li>
+                  <li class="fs-5">
+                    <a href="#"><i class="textColored bi bi-youtube"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="row mt-4">
+                <h3 class="section-tile fs-4 textColored">
+                  <i class="bi bi-cursor-fill"></i> Endereço
+                </h3>
+                <p>Rua Teste, 123 - Bairro Exemplo, São Paulo, SP</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-mask-plugin@1.14.16/dist/jquery.mask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
