@@ -1,0 +1,16 @@
+@use "variaveis";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: variaveis.$fonte-principal;
+  background-color: variaveis.$cor-de-fundo;
+}
+
+li {
+  list-style: none;
+}

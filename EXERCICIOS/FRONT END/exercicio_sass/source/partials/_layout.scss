@@ -1,0 +1,15 @@
+@use "variaveis";
+
+.container {
+  max-width: variaveis.$largura-container;
+  width: 100%;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1023px) {
+    max-width: 80%;
+  }
+}
+
+section {
+  padding: 56px 0;
+}
