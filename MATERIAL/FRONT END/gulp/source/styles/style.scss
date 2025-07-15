@@ -1,0 +1,9 @@
+@use "variaveis";
+
+body {
+  font-family: variaveis.$font-family;
+  background-color: variaveis.$background-color;
+  color: variaveis.$text-color;
+  margin: 0;
+  padding: 0;
+}
