@@ -1,0 +1,32 @@
+@import "_tipografia.less";
+@breakpointMobile: ~"(max-width:767px)";
+@breakpointTablet: ~"(min-width:768px)";
+@breakpointDesktop: ~"(min-width:1024px)";
+@media @breakpointMobile {
+  body {
+    font-size: @mobileFont;
+  }
+  .container {
+    max-width: 70%;
+    padding: 0 1em;
+  }
+}
+
+@media @breakpointTablet {
+  body {
+    font-size: @regularFont;
+  }
+  .container {
+    max-width: 80%;
+    padding: 0 2em;
+  }
+}
+@media @breakpointDesktop {
+  body {
+    font-size: @regularFont;
+  }
+  .container {
+    max-width: 90%;
+    padding: 0 3em;
+  }
+}
