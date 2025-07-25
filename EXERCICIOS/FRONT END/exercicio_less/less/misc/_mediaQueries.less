@@ -1,0 +1,49 @@
+@import "../base/_tipografia.less";
+
+@media @breakpointMobile {
+  body {
+    font-size: @mobileFont;
+  }
+  .container {
+    max-width: 70%;
+    padding: 0 1em;
+  }
+  .products {
+    display: block;
+  }
+  .product-item {
+    margin-bottom: 2em;
+  }
+}
+@media @breakpointTablet {
+  body {
+    font-size: @regularFont;
+  }
+  .container {
+    max-width: 80%;
+    padding: 0 2em;
+  }
+  .products {
+    grid-template-columns: repeat(2, 48.5%);
+    column-gap: 3%;
+    row-gap: 4%;
+  }
+}
+@media @breakpointDesktop {
+  body {
+    font-size: @regularFont;
+  }
+  .container {
+    max-width: 90%;
+    padding: 0 3em;
+  }
+  .products {
+    grid-template-columns: repeat(3, 32.66%);
+    column-gap: 1%;
+    row-gap: 4%;
+  }
+}
+
+@breakpointMobile: ~"(max-width:767px)";
+@breakpointTablet: ~"(min-width:768px)";
+@breakpointDesktop: ~"(min-width:1024px)";

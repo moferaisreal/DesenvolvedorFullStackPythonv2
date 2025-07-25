@@ -1,0 +1,45 @@
+@import "base/_cores.less";
+
+header {
+  background-color: #colors[cordestaquesecundario];
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: calc(8px + 1.5625vw);
+  width: 100%;
+  z-index: 100;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  img {
+    max-width: 120px;
+    height: auto;
+  }
+}
+
+.menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+
+  li {
+    font-weight: bold;
+    margin-left: 24px;
+    a {
+      color: #colors[cortexto];
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: #colors[corlinks_hover_text];
+      }
+    }
+  }
+}

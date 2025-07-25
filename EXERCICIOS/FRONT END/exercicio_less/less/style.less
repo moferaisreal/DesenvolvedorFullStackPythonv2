@@ -1,0 +1,29 @@
+@import "base/_reset.less";
+@import "base/_tipografia.less";
+@import "base/_cores.less";
+
+@import "misc/_mediaQueries.less";
+
+@import "components/_header.less";
+@import "components/_profile.less";
+@import "components/_projects.less";
+
+body {
+  background-color: #colors[corfundo];
+  font-size: @mobileFont;
+  min-height: 100vh;
+  transition: font-size 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #colors[cortitulo];
+}
+
+p {
+  color: #colors[cortexto];
+}
