@@ -1,6 +1,4 @@
-#colors() {
-  .colors();
-}
+@import "base/_cores.less";
 
 .listaProjetos {
   display: flex;
@@ -31,17 +29,17 @@
         padding: calc(8px + 1.5625vw);
         border-radius: 50px;
         text-decoration: none;
-        color: extract(@cores, corlinks);
-        background-color: extract(@cores, corlinks_background);
-        border: 2px solid extract(@cores, corlinks_border);
+        color: #colors[corlinks];
+        background-color: #colors[corlinks_background];
+        border: 2px solid #colors[corlinks_border];
 
         transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out,
           transform 0.5s ease-in-out, border-color 0.5s ease-in-out;
 
         &:hover {
-          color: extract(@cores, corlinks_hover_text);
-          background-color: extract(@cores, corlinks_hover_background);
-          border-color: extract(@cores, corlinks_hover_border);
+          color: #colors[corlinks_hover_text];
+          background-color: #colors[corlinks_hover_background];
+          border-color: #colors[corlinks_hover_border];
           transform: scale(1.05);
         }
       }
@@ -69,17 +67,17 @@ section {
   }
   h4 {
     margin-top: 8px;
-    color: extract(@cores, cortitulo);
+    color: #colors[cortitulo];
   }
   p {
     margin: 8px 0;
-    color: extract(@cores, cortexto);
+    color: #colors[cortexto];
     line-height: 1.4;
   }
   .product-button {
     display: block;
-    background-color: extract(@cores, corbotao);
-    color: extract(@cores, corbotao);
+    background-color: #colors[corbotao];
+    color: #colors[corbotao];
     text-align: center;
     padding: 8px 0;
     border-radius: 8px;
@@ -89,6 +87,8 @@ section {
     width: 100%;
     &:hover {
       background-color: (transparent);
+      border: 1px solid #colors[corborda];
+      color: #colors[corlinks_hover_text];
     }
   }
 }

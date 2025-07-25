@@ -1,6 +1,4 @@
-#colors() {
-  .colors();
-}
+@import "base/_cores.less";
 
 .marginBottom8 {
   margin-bottom: calc(8px + 1.5625vw);
@@ -17,19 +15,19 @@
 .profileBio {
   text-align: center;
   margin-top: calc(16px + 1.5625vw);
-  color: extract(@cores[cortitulo], 0.8);
+  color: #colors[cortitulo];
   &Name {
     margin: 0;
     .marginBottom8();
   }
   &Sub {
     margin: 0;
-    color: extract(@cores[cortextosecundario], 0.6);
+    color: #colors[cortextosecundario];
     .marginBottom8();
   }
   &Description {
     margin: calc(8px + 0.78125vw) 0;
-    color: extract(@cores[cortextosecundario], 0.8);
+    color: #colors[cortextosecundario];
     line-height: 1.5;
   }
 }
@@ -49,7 +47,7 @@
       display: inline-block;
       &:hover {
         transform: scale(1.3);
-        color: extract(@cores[cortitulo], 0.8);
+        color: #colors[cortitulo];
       }
     }
   }

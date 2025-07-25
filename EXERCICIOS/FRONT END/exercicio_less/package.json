@@ -11,8 +11,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-less": "lessc less/style.less css/style.css",
-    "watch-less": "less-watch-compiler less css style.less"
+    "build-less": "lessc less/style.less css/style.css --verbose --math=always",
+    "watch-less": "less-watch-compiler less css/style.less --verbose"
   },
   "author": "",
   "license": "ISC",

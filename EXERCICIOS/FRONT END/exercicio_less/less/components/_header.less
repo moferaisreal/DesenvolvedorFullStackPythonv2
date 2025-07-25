@@ -1,7 +1,7 @@
-@import "base/_maps.less";
+@import "base/_cores.less";
 
 header {
-  background-color: extract(@cores, cordestaquesecundario);
+  background-color: #colors[cordestaquesecundario];
   position: sticky;
   top: 0;
   left: 0;
@@ -35,10 +35,10 @@ header .container {
     font-weight: bold;
     margin-left: 24px;
     a {
-      color: extract(@cores, cortexto);
+      color: #colors[cortexto];
       transition: color 0.3s ease-in-out;
       &:hover {
-        color: extract(@cores, corlinks_hover_text);
+        color: #colors[corlinks_hover_text];
       }
     }
   }

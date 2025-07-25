@@ -1,7 +1,6 @@
 @import "base/_reset.less";
 @import "base/_tipografia.less";
-@import "base/_maps.less";
-@import "base/_cores";
+@import "base/_cores.less";
 
 @import "misc/_mediaQueries.less";
 
@@ -10,7 +9,7 @@
 @import "components/_projects.less";
 
 body {
-  background-color: extract(@cores, corfundo);
+  background-color: #colors[corfundo];
   font-size: @mobileFont;
   min-height: 100vh;
   transition: font-size 0.3s ease-in-out, background-color 0.3s ease-in-out;
@@ -22,9 +21,9 @@ h3,
 h4,
 h5,
 h6 {
-  color: extract(@cores, cortitulo);
+  color: #colors[cortitulo];
 }
 
 p {
-  color: extract(@cores, cortexto);
+  color: #colors[cortexto];
 }
