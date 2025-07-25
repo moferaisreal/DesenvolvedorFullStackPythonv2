@@ -1,0 +1,94 @@
+#colors() {
+  .colors();
+}
+
+.listaProjetos {
+  display: flex;
+  justify-content: center;
+  margin-top: calc(16px + 1.5625vw);
+  font-weight: bold;
+  width: 100%;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    li {
+      margin: calc(8px + 1.5625vw) 0;
+      width: 100%;
+      max-width: 60em;
+
+      a {
+        display: block;
+        text-align: center;
+        width: 100%;
+        min-width: 30vw;
+        max-width: 60em;
+        padding: calc(8px + 1.5625vw);
+        border-radius: 50px;
+        text-decoration: none;
+        color: extract(@cores, corlinks);
+        background-color: extract(@cores, corlinks_background);
+        border: 2px solid extract(@cores, corlinks_border);
+
+        transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out,
+          transform 0.5s ease-in-out, border-color 0.5s ease-in-out;
+
+        &:hover {
+          color: extract(@cores, corlinks_hover_text);
+          background-color: extract(@cores, corlinks_hover_background);
+          border-color: extract(@cores, corlinks_hover_border);
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+
+section {
+  padding: 56px 0;
+}
+
+.products {
+  margin-top: 40px;
+  display: grid;
+  width: 100%;
+}
+
+.product-item {
+  img {
+    width: 100%;
+    border-radius: 16px;
+    max-height: 180px;
+    object-fit: cover;
+    height: 180px;
+  }
+  h4 {
+    margin-top: 8px;
+    color: extract(@cores, cortitulo);
+  }
+  p {
+    margin: 8px 0;
+    color: extract(@cores, cortexto);
+    line-height: 1.4;
+  }
+  .product-button {
+    display: block;
+    background-color: extract(@cores, corbotao);
+    color: extract(@cores, corbotao);
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    margin-top: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    width: 100%;
+    &:hover {
+      background-color: (transparent);
+    }
+  }
+}
