@@ -58,7 +58,7 @@ module.exports = function (grunt) {
             },
             {
               match: "JSFILE",
-              replacement: ".scripts/script.min.js",
+              replacement: "./scripts/script.min.js",
             },
           ],
         },
@@ -102,10 +102,10 @@ module.exports = function (grunt) {
 
   grunt.registerTask("default", ["watch"]);
   grunt.registerTask("build", [
+    "clean",
     "less:production",
+    "uglify",
     "htmlmin:dist",
     "replace:dist",
-    "clean",
-    "uglify",
   ]);
 };
