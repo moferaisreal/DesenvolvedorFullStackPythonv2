@@ -1,13 +1,16 @@
-@use "variaveis";
+@use "vars";
 
 .shows {
   padding: 2vw 5.6vw;
   min-height: 50vw;
   &__list {
+    margin-top: 44px;
     display: none;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
-    margin-top: 44px;
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
     &--is-active {
       display: grid;
     }
@@ -21,8 +24,14 @@
   &__tabs {
     display: flex;
     justify-content: center;
+
+    @media (max-width: 768px) {
+      white-space: nowrap;
+      overflow-x: scroll;
+      padding-left: 20px;
+    }
     &__button {
-      color: variaveis.$corTextoSecundario;
+      color: vars.$corTextoSecundario;
       font-size: 20px;
       border: none;
       padding-bottom: 5px;
@@ -32,7 +41,10 @@
       cursor: pointer;
       border-bottom: 5px solid transparent;
       &--is-active {
-        border-bottom: 5px solid variaveis.$corTextoSecundario;
+        border-bottom: 5px solid vars.$corTextoSecundario;
+      }
+      @media (max-width: 768px) {
+        font-size: 16px;
       }
     }
   }
