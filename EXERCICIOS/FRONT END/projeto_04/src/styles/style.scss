@@ -106,16 +106,15 @@ body {
   padding: 8px 14px;
   letter-spacing: 1px;
   border: 1px solid vars.$corFundoBotao;
-
   &:hover {
-    background-color: lighten($color: vars.$corFundoBotao, $amount: 3%);
+    background-color: lighten(vars.$corFundoBotao, 3%);
   }
 
   &--secondary {
     background-color: vars.$corFundoBotaoBlue;
     border-color: vars.$corFundoBotaoBlue;
     &:hover {
-      background-color: lighten($color: vars.$corFundoBotaoBlue, $amount: 3%);
+      background-color: color.adjust($color, $lightness: 3%);
     }
   }
   &--dark {
