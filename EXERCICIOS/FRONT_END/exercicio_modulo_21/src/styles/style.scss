@@ -1,0 +1,55 @@
+@use "vars";
+@use "utopia-core-scss/src/utopia" as utopia;
+
+:root {
+  @include utopia.generateTypeScale(
+    (
+      "minWidth": 360,
+      "maxWidth": 1240,
+      "minFontSize": 12,
+      "maxFontSize": 20,
+      "minTypeScale": 1.5,
+      "maxTypeScale": 1.618,
+      "positiveSteps": 5,
+      "negativeSteps": 2,
+      "prefix": "step-",
+      "relativeTo": "viewport-width",
+    )
+  );
+  @include utopia.generateSpaceScale(
+    (
+      "minWidth": 360,
+      "maxWidth": 1240,
+      "minSize": 12,
+      "maxSize": 20,
+      "positiveSteps": (
+        1.5,
+        2,
+        3,
+        4,
+        6,
+      ),
+      "negativeSteps": (
+        0.75,
+        0.5,
+        0.25,
+      ),
+      "customSizes": (
+        "s-l",
+      ),
+      "prefix": "space-",
+      "relativeTo": "viewport-width",
+    )
+  );
+}
+
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: vars.$headerBg;
+  color: vars.$headerText;
+}
