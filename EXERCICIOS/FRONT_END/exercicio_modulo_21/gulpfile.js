@@ -1,45 +1,56 @@
-// Import the tools we need
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
-const path = require("path");
+const imagemin = require("gulp-imagemin");
 
+// Your existing styles task
 function styles() {
-  console.log("Diretório trabalhado:", process.cwd());
-  console.log(
-    "Procurando o arquivo .scss:",
-    path.resolve("./src/styles/**/*.scss")
-  );
-  console.log(
-    "Sass includepath vão ser:",
-    ["node_modules"].map((p) => path.resolve(p))
-  );
-
   return gulp
     .src("./src/styles/**/*.scss")
     .pipe(
       sass({
         outputStyle: "compressed",
-        includePaths: ["node_modules"],
-        verbose: true,
-      }).on("error", function (error) {
-        console.log("Detailed Sass error information:");
-        console.log("Error message:", error.message);
-        console.log("File:", error.file);
-        console.log("Line:", error.line);
-        console.log("Column:", error.column);
-        sass.logError.call(this, error);
-      })
+      }).on("error", sass.logError)
     )
     .pipe(gulp.dest("./dist/css"));
 }
 
-function watchFiles() {
-  gulp.watch("./src/styles/**/*.scss", styles);
+// Simplified but effective image optimization
+function images() {
+  console.log("Starting image optimization...");
+
+  return gulp
+    .src("./src/images/**/*.{jpg,jpeg,png,gif,svg}")
+    .pipe(
+      imagemin([
+        // Built-in optimizers that come with gulp-imagemin
+        imagemin.mozjpeg({ quality: 85, progressive: true }),
+        imagemin.optipng({ optimizationLevel: 5 }),
+        imagemin.svgo({
+          plugins: [
+            { name: "removeViewBox", active: false },
+            { name: "cleanupIDs", active: false },
+          ],
+        }),
+        imagemin.gifsicle({ interlaced: true }),
+      ])
+    )
+    .pipe(gulp.dest("./dist/images"))
+    .on("end", () => console.log("Image optimization completed!"));
 }
 
+// Watch function for development
+function watchFiles() {
+  gulp.watch("./src/styles/**/*.scss", styles);
+  gulp.watch("./src/images/**/*.{jpg,jpeg,png,gif,svg}", images);
+  console.log("Watching for changes...");
+}
+
+// Export tasks
 exports.styles = styles;
+exports.images = images;
 exports.watch = watchFiles;
 
-gulp.task("default", gulp.parallel(styles));
-
-gulp.task("watch", gulp.series(styles, watchFiles));
+// Define build tasks
+gulp.task("build", gulp.parallel(styles, images));
+gulp.task("default", gulp.series("build"));
+gulp.task("dev", gulp.series("build", watchFiles));
