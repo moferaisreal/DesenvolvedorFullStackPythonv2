@@ -105,7 +105,7 @@ body {
   text-decoration: none;
   padding: 8px 14px;
   letter-spacing: 1px;
-  border: 1px solid vars.$corFundoBotao;
+  border: 3px solid vars.$corFundoBotao;
   &:hover {
     background-color: lighten(vars.$corFundoBotao, 3%);
   }

@@ -6,12 +6,16 @@
   left: 0;
   background-color: vars.$headerBg;
   color: vars.$headerText;
-  padding: var(--space-3xs);
   transition: background-color 0.5s ease;
-  z-index: 1;
+  z-index: 100;
+  height: 5em;
+
+  @media (max-width: 768px) {
+    height: 60px;
+  }
+
   &--is-hidden {
     background-color: transparent;
-    transition: background-color 0.5s ease;
   }
   .header {
     &__logo,
@@ -21,11 +25,72 @@
       transition: opacity 0.5s ease;
     }
   }
+
   img {
-    max-height: var(--font-5);
+    max-height: calc(64px - 2 * var(--space-3xs));
+    height: 100%;
+    width: auto;
   }
+
   a {
-    font-family: vars.$normal;
+    font-family: vars.$heading;
     color: vars.$headerText;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: var(--space-3xs) var(--space-s);
+
+    @media (max-width: 768px) {
+      padding: var(--space-3xs) var(--space-xs);
+    }
+  }
+
+  &__logo {
+    max-width: 5em;
+    width: 100%;
+    height: calc(64px - 2 * var(--space-3xs));
+    margin: 0;
+    transition: opacity 0.5s ease;
+
+    @media (max-width: 768px) {
+      max-width: 4em;
+    }
+  }
+
+  .button {
+    height: 64px;
+    min-height: 2.5em;
+
+    @media (max-width: 768px) {
+      font-size: var(--font--2);
+      padding: var(--space-3xs);
+      height: auto;
+      height: calc(64px - 2 * var(--space-2xs));
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    height: calc(64px - 2 * var(--space-3xs));
+    &__item {
+      font-family: vars.$cursive;
+      font-size: var(--font-1);
+      color: vars.$headerText;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: vars.$headerHover;
+      }
+
+      @media (max-width: 768px) {
+        font-size: var(--font--1);
+      }
+    }
   }
 }
