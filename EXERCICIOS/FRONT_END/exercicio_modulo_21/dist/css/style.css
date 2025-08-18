@@ -154,7 +154,7 @@
 }
 @media (max-width: 768px) {
   .header .button {
-    font-size: var(--font--2);
+    font-size: var(--font--1);
     padding: var(--space-3xs);
     height: auto;
     height: calc(64px - 2 * var(--space-2xs));
@@ -179,6 +179,45 @@
   .header__links__item {
     font-size: var(--font--1);
   }
+}
+
+.hero {
+  padding: var(--space-l-xl);
+  min-height: 100vh;
+  background-image: url("../images/bg/bg_hero_desktop.jpg");
+  background-size: cover;
+  color: #8b4513;
+}
+@media (max-width: 768px) {
+  .hero {
+    background-image: url("../images/bg/bg_hero_desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+.hero__content {
+  max-width: 40em;
+}
+.hero__content img {
+  max-height: 200px;
+}
+.hero__content p {
+  color: #f5f5dc;
+  font-weight: bold;
+}
+.hero__content__list {
+  display: flex;
+  justify-content: flex-start;
+  padding: var(--space-s-m);
+}
+.hero__content__list__items {
+  margin: var(--space-s);
+}
+.hero__content__list__items .button:hover {
+  border-color: #1c1c1c;
+}
+.hero__content__list img {
+  max-height: 100px;
 }
 
 * {
@@ -225,4 +264,38 @@ body {
 }
 .button--secondary:hover {
   background-color: #d4af37;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "MedievalSharp", cursive;
+  color: #722f37;
+  font-size: var(--font-3);
+  transition: ease-in-out 0.3s;
+}
+@media (max-width: 768px) {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: var(--font-2);
+    transition: ease-in-out 0.3s;
+  }
+}
+
+p {
+  font-family: "Cormorant", serif;
+  color: #8b4513;
+  font-size: var(--font-1);
+  transition: ease-in-out 0.3s;
+}
+@media (max-width: 768px) {
+  p {
+    font-size: var(--font-0);
+    transition: ease-in-out 0.3s;
+  }
 }

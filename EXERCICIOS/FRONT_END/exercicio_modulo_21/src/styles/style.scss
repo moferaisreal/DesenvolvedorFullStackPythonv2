@@ -1,5 +1,6 @@
 @use "vars";
 @use "header";
+@use "hero";
 // ===================================================================
 // FLUID TYPOGRAPHY SYSTEM
 // Building responsive typography that scales smoothly across devices
@@ -48,5 +49,32 @@ body {
     &:hover {
       background-color: vars.$headerHover;
     }
+  }
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: vars.$heading;
+  color: vars.$mainSection;
+  font-size: var(--font-3);
+  transition: ease-in-out 0.3s;
+  @media (max-width: 768px) {
+    font-size: var(--font-2);
+    transition: ease-in-out 0.3s;
+  }
+}
+
+p {
+  font-family: vars.$text;
+  color: vars.$mainText;
+  font-size: var(--font-1);
+  transition: ease-in-out 0.3s;
+
+  @media (max-width: 768px) {
+    font-size: var(--font-0);
+    transition: ease-in-out 0.3s;
   }
 }

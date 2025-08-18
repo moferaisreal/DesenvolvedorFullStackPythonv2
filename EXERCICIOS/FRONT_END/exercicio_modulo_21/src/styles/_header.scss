@@ -66,7 +66,7 @@
     min-height: 2.5em;
 
     @media (max-width: 768px) {
-      font-size: var(--font--2);
+      font-size: var(--font--1);
       padding: var(--space-3xs);
       height: auto;
       height: calc(64px - 2 * var(--space-2xs));
