@@ -225,6 +225,12 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  line-height: 1.7;
+}
+@media (max-width: 768px) {
+  * {
+    line-height: 1.5;
+  }
 }
 
 body {
