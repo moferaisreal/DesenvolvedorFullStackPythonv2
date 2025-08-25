@@ -1,1 +1,235 @@
 @use "vars";
+
+.timeline {
+  padding: var(--space-xl) var(--space-s);
+  background: linear-gradient(
+    135deg,
+    vars.$mainBg 0%,
+    darken(vars.$mainBg, 5%) 100%
+  );
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    padding: var(--space-l) var(--space-xs);
+    min-height: auto;
+  }
+
+  &__content {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+
+    &__title {
+      font-family: vars.$heading;
+      color: vars.$mainSection;
+      font-size: var(--font-4);
+      margin-bottom: var(--space-xs);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+      @media (max-width: 768px) {
+        font-size: var(--font-3);
+      }
+    }
+
+    &__subtitle {
+      font-family: vars.$cursive;
+      color: vars.$mainText;
+      font-size: var(--font-1);
+      margin-bottom: var(--space-xl);
+      font-style: italic;
+
+      @media (max-width: 768px) {
+        font-size: var(--font-0);
+        margin-bottom: var(--space-l);
+      }
+    }
+
+    &__navbar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-bottom: var(--space-xl);
+      padding: var(--space-m) 0;
+
+      @media (max-width: 768px) {
+        flex-wrap: wrap;
+        gap: var(--space-s);
+        margin-bottom: var(--space-l);
+      }
+
+      // Timeline connecting line
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(
+          to right,
+          vars.$borders,
+          vars.$headerHover,
+          vars.$borders
+        );
+        border-radius: 2px;
+        transform: translateY(-50%);
+        z-index: 1;
+
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+
+      &__button {
+        position: relative;
+        z-index: 2;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 4px solid vars.$headerHover;
+        background: vars.$mainBg;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 var(--space-xs);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+        @media (max-width: 768px) {
+          width: 60px;
+          height: 60px;
+          margin: var(--space-3xs);
+        }
+
+        &:hover {
+          transform: scale(1.1);
+          border-color: vars.$headerText;
+          background: vars.$headerHover;
+          box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        &:active,
+        &--active {
+          background: vars.$headerHover;
+          border-color: vars.$mainSection;
+          transform: scale(1.1);
+        }
+
+        &__icon {
+          width: 40px;
+          height: 40px;
+          object-fit: contain;
+          transition: all 0.3s ease;
+
+          @media (max-width: 768px) {
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        // Special styling for first and last buttons
+        &:first-child {
+          border-color: vars.$mainSection;
+          background: linear-gradient(
+            135deg,
+            vars.$mainSection,
+            vars.$headerHover
+          );
+
+          &:hover {
+            background: linear-gradient(
+              135deg,
+              vars.$headerHover,
+              vars.$mainSection
+            );
+          }
+        }
+
+        &:last-child {
+          border-color: vars.$mainText;
+          background: linear-gradient(135deg, vars.$mainText, vars.$borders);
+
+          &:hover {
+            background: linear-gradient(135deg, vars.$borders, vars.$mainText);
+          }
+        }
+      }
+    }
+
+    &__items {
+      display: none; // Hide the empty items for now, you can implement content later
+    }
+
+    // Timeline description section (you can add this later)
+    &__description {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: var(--space-l);
+      background: rgba(vars.$mainBg, 0.9);
+      border-radius: 12px;
+      border: 2px solid vars.$borders;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+
+      &__title {
+        font-family: vars.$heading;
+        color: vars.$mainSection;
+        font-size: var(--font-2);
+        margin-bottom: var(--space-s);
+      }
+
+      &__text {
+        font-family: vars.$text;
+        color: vars.$mainText;
+        font-size: var(--font-0);
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+// Animation for timeline entrance
+@keyframes timelineEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.timeline__content__navbar__button {
+  animation: timelineEnter 0.6s ease forwards;
+
+  @for $i from 1 through 7 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+}
+
+// Responsive adjustments for very small screens
+@media (max-width: 480px) {
+  .timeline {
+    &__content {
+      &__navbar {
+        &__button {
+          width: 50px;
+          height: 50px;
+          margin: var(--space-2xs);
+
+          &__icon {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
+}

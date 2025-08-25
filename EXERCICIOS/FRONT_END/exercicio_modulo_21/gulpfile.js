@@ -14,6 +14,17 @@ function styles() {
     .pipe(gulp.dest("./dist/css"));
 }
 
+function scripts() {
+  return gulp.src("./src/scripts/**/*.js").pipe(gulp.dest("./dist/js"));
+}
+
+function uglify() {
+  return gulp
+    .src("./dist/js/**/*.js")
+    .pipe(uglify())
+    .pipe(gulp.dest("./dist/js"));
+}
+
 // Simplified but effective image optimization
 function images() {
   console.log("Starting image optimization...");
@@ -42,15 +53,18 @@ function images() {
 function watchFiles() {
   gulp.watch("./src/styles/**/*.scss", styles);
   gulp.watch("./src/images/**/*.{jpg,jpeg,png,gif,svg}", images);
+  gulp.watch("./src/scripts/**/*.js", scripts);
   console.log("Watching for changes...");
 }
 
 // Export tasks
+exports.uglify = uglify;
+exports.scripts = scripts;
 exports.styles = styles;
 exports.images = images;
 exports.watch = watchFiles;
 
 // Define build tasks
-gulp.task("build", gulp.parallel(styles, images));
+gulp.task("build", gulp.parallel(styles, images, scripts, uglify));
 gulp.task("default", gulp.series("build"));
 gulp.task("dev", gulp.series("build", watchFiles));
