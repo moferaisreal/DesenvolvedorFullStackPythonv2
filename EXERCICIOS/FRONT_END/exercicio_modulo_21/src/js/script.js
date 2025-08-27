@@ -8,24 +8,31 @@ const timelineData = {
   "days-before": {
     title: "Dias Antes dos Dias",
     description:
-      "Antes da criação do mundo, quando apenas Eru Ilúvatar existia no Vazio. O tempo ainda não havia começado e apenas a música da criação ecoava no infinito.",
+      "O nascimento do mundo a partir da Música dos Ainur, a visão de Eru Ilúvatar e a descida dos Valar para moldar Arda.",
     events: [
-      "Eru Ilúvatar existe sozinho no Vazio",
-      "A Música dos Ainur é concebida",
-      "Criação da Visão do Mundo",
+      "Os Valar e os Maiar entram em Arda",
+      "A Primeira Guerra e a Destruição de Arda",
+      "A Primavera de Arda",
+      "Melkor ergue as Montanhas de Ferro e explora Utumno",
+      "As Duas Lâmpadas são destruídas",
+      "A separação de Aman da Terra-média; fundação de Valinor",
     ],
-    figures: ["Eru Ilúvatar (O Único)", "Melkor (antes da corrupção)"],
+    figures: ["Eru Ilúvatar", "Melkor", "Manwë", "Varda", "Aulë", "Ulmo"],
     locations: ["O Vazio Atemporal", "As Salas Intemporais"],
     detailedInfo: {
       period: "Antes da Criação do Tempo",
-      duration: "Eternidade",
+      duration: "Fora do tempo (antes da contagem dos anos).",
       significance:
-        "O período primordial onde apenas Eru Ilúvatar existia, antes de criar os Ainur e conceber o mundo através da Grande Música.",
+        "Origem cósmica; introdução do Bem (Eru e os Valar) e do Mal (Melkor).",
       keyMoments: [
-        "Eru Ilúvatar contempla a criação no Vazio infinito",
-        "Nascimento do conceito da Música da Criação",
-        "Primeiro vislumbre da visão de Eä (o Universo)",
-        "Preparação para a criação dos Ainur",
+        "Os Valar descem para Arda.",
+        "Melkor se retira de Arda apenas para retornar enquanto os Valar trabalham em sua organização. A Primeira Guerra e a Destruição de Arda.",
+        "Tulkas entra em Arda e Melkor foge.",
+        "A conclusão de Arda. Os Valar criam as Duas Lâmpadas e se estabelecem em Almaren. Início da Primavera de Arda.",
+        "Tulkas se casa com Nessa. Melkor retorna secretamente para Arda, ergue as Montanhas de Ferro e escava Utumno. Isso destrói parcialmente a Primavera de Arda.",
+        "Melkor derruba as Duas Lâmpadas, formando os Mares de Helcar e Ringil. Almaren é destruído. Para preservar a vida na Terra, Yavanna coloca a maioria dos seres vivos em um longo sono. Fim da Primavera de Arda.",
+        "Os Valar criam os Pelóri e se estabelecem em Aman.",
+        "As Duas Árvores são cultivadas em Valinor.",
       ],
       cosmology:
         "O Vazio Atemporal representa o estado anterior à existência de qualquer realidade material ou temporal. É o reino puro do pensamento divino.",
@@ -475,7 +482,7 @@ function initializeTimeline() {
             eraData.figures
           );
           const locationsSection = createSection(
-            "Localizações",
+            "Locais Importantes",
             eraData.locations
           );
 
@@ -626,13 +633,6 @@ function setupTimelineVisibilityControl(timelineSection, button) {
   };
 }
 
-// Initialize when DOM is loaded
-document.addEventListener("DOMContentLoaded", () => {
-  initializeTimeline();
-  initializeTimelineKeyboard();
-
-  console.log("Timeline with conditional sidebar initialized");
-});
 // ===================================================================
 // HEADER DYNAMIC BEHAVIOR
 // ===================================================================
