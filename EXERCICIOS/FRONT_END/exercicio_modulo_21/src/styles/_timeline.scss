@@ -276,7 +276,7 @@
   position: fixed;
   right: 0;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) translateX(100%);
   background: linear-gradient(
     135deg,
     vars.$headerBg,
@@ -293,15 +293,24 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   z-index: 90;
   box-shadow: -4px 0 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
 
   display: flex;
   align-items: center;
   gap: var(--space-2xs);
+
+  // Estado visível - quando timeline está na viewport
+  &--visible {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
 
   &:hover {
     background: linear-gradient(
@@ -309,12 +318,18 @@
       vars.$headerHover,
       darken(vars.$headerHover, 5%)
     );
-    transform: translateY(-50%) translateX(-5px);
+
+    &.timeline__details-btn--visible {
+      transform: translateY(-50%) translateX(-5px);
+    }
+
     box-shadow: -6px 0 20px rgba(0, 0, 0, 0.4);
   }
 
   &:active {
-    transform: translateY(-50%) translateX(-2px);
+    &.timeline__details-btn--visible {
+      transform: translateY(-50%) translateX(-2px);
+    }
   }
 
   .timeline__details-btn-arrow {
@@ -328,12 +343,21 @@
 
   @media (max-width: 768px) {
     position: static;
-    transform: none;
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
     writing-mode: initial;
     text-orientation: initial;
     border-radius: 8px;
     margin: var(--space-m) auto 0;
     width: fit-content;
+    transition: all 0.4s ease;
+
+    &--visible {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
 
     &:hover {
       transform: translateY(-2px);

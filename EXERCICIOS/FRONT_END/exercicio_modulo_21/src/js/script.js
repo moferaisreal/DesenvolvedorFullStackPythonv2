@@ -4,9 +4,6 @@
 
 // Timeline data with additional detailed information
 // Timeline data with additional detailed information
-// Timeline data with additional detailed information
-// Timeline data with additional detailed information
-// Timeline data with additional detailed information
 const timelineData = {
   "days-before": {
     title: "Dias Antes dos Dias",
@@ -482,18 +479,10 @@ function initializeTimeline() {
             eraData.locations
           );
 
-          // Criar botão lateral "Detalhes"
-          const detailsButton = document.createElement("button");
-          detailsButton.className = "timeline__details-btn";
-          detailsButton.innerHTML =
-            '<span>+ Detalhes</span><span class="timeline__details-btn-arrow">→</span>';
-          detailsButton.addEventListener("click", () => openSidebar(era));
-
           // Adicionar seções ao container
           listsContainer.appendChild(eventsSection);
           listsContainer.appendChild(figuresSection);
           listsContainer.appendChild(locationsSection);
-          listsContainer.appendChild(detailsButton);
 
           // Fade back in
           descriptionContainer.style.opacity = "1";
@@ -509,6 +498,9 @@ function initializeTimeline() {
   if (activeButton) {
     activeButton.click();
   }
+
+  // CRIAR BOTÃO FIXO E CONFIGURAR VISIBILIDADE
+  createTimelineDetailsButton();
 }
 
 // Timeline keyboard navigation
@@ -539,12 +531,107 @@ function initializeTimelineKeyboard() {
   });
 }
 
+// Sistema robusto de controle do botão baseado na visibilidade da timeline
+let timelineVisibilityController = null;
+
+function createTimelineDetailsButton() {
+  // Verificar se timeline existe
+  const timelineSection = document.getElementById("timeline");
+  if (!timelineSection) {
+    console.warn("Timeline section not found - button will not be created");
+    return;
+  }
+
+  // Remover botão existente se houver
+  const existingButton = document.querySelector(".timeline__details-btn");
+  if (existingButton) {
+    existingButton.remove();
+  }
+
+  // Criar novo botão
+  const detailsButton = document.createElement("button");
+  detailsButton.className = "timeline__details-btn";
+  detailsButton.innerHTML =
+    '<span>+ Detalhes</span><span class="timeline__details-btn-arrow">→</span>';
+
+  // Event listener para abrir sidebar
+  detailsButton.addEventListener("click", () => {
+    const activeButton = document.querySelector(
+      ".timeline__content__navbar__button--active"
+    );
+    if (activeButton) {
+      const era = activeButton.getAttribute("data-era");
+      openSidebar(era);
+    }
+  });
+
+  // Adicionar ao body
+  document.body.appendChild(detailsButton);
+
+  // Configurar sistema de visibilidade
+  setupTimelineVisibilityControl(timelineSection, detailsButton);
+}
+
+function setupTimelineVisibilityControl(timelineSection, button) {
+  let isButtonVisible = false;
+  let ticking = false;
+
+  // Função para verificar visibilidade da timeline
+  function checkTimelineVisibility() {
+    const rect = timelineSection.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Timeline é considerada visível se qualquer parte estiver no viewport
+    // Com margem de tolerância de 100px para melhor UX
+    const isVisible = rect.top < windowHeight + 100 && rect.bottom > -100;
+
+    // Só atualizar se o estado mudou (evita manipulações desnecessárias do DOM)
+    if (isVisible !== isButtonVisible) {
+      isButtonVisible = isVisible;
+
+      if (isVisible) {
+        button.classList.add("timeline__details-btn--visible");
+      } else {
+        button.classList.remove("timeline__details-btn--visible");
+      }
+    }
+  }
+
+  // Função throttled para performance
+  function throttledCheck() {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        checkTimelineVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  // Event listeners
+  window.addEventListener("scroll", throttledCheck, { passive: true });
+  window.addEventListener("resize", throttledCheck, { passive: true });
+
+  // Verificação inicial após delay para garantir que layout esteja pronto
+  setTimeout(() => {
+    checkTimelineVisibility();
+  }, 100);
+
+  // Armazenar referência para cleanup se necessário
+  timelineVisibilityController = {
+    cleanup: () => {
+      window.removeEventListener("scroll", throttledCheck);
+      window.removeEventListener("resize", throttledCheck);
+    },
+  };
+}
+
 // Initialize when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
   initializeTimeline();
   initializeTimelineKeyboard();
 
-  console.log("Timeline with Sidebar initialized!");
+  console.log("Timeline with conditional sidebar initialized");
 });
 // ===================================================================
 // HEADER DYNAMIC BEHAVIOR
