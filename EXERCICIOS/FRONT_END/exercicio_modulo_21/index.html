@@ -19,12 +19,12 @@
     <title>The Lord of The Rings</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header header--transparent">
       <div class="header__container">
         <h1>
           <img
             class="header__logo"
-            src="dist/images/logo/the-lord-of-the-rings-3.svg"
+            src="dist/images/logo/the-lord-of-the-rings-horizontal-gold-1.svg"
             alt="Senhor dos Aneis"
           />
         </h1>
@@ -39,7 +39,7 @@
       </div>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="hero__content">
         <div class="hero__content__branding">
           <img src="./dist/images/branding/branding.jpg" alt="" />
@@ -74,7 +74,7 @@
       </ul>
     </section>
 
-    <section class="timeline">
+    <section class="timeline" id="timeline">
       <div class="timeline__content">
         <h2 class="timeline__content__title">Linha do Tempo</h2>
         <p class="timeline__content__subtitle">
@@ -92,7 +92,6 @@
               class="timeline__content__navbar__button__icon"
             />
           </button>
-
           <button
             class="timeline__content__navbar__button"
             data-era="years-of-trees"
@@ -103,7 +102,6 @@
               class="timeline__content__navbar__button__icon"
             />
           </button>
-
           <button
             class="timeline__content__navbar__button"
             data-era="first-age"
@@ -114,7 +112,6 @@
               class="timeline__content__navbar__button__icon"
             />
           </button>
-
           <button
             class="timeline__content__navbar__button"
             data-era="second-age"
@@ -125,7 +122,6 @@
               class="timeline__content__navbar__button__icon"
             />
           </button>
-
           <button
             class="timeline__content__navbar__button"
             data-era="third-age"
@@ -136,7 +132,6 @@
               class="timeline__content__navbar__button__icon"
             />
           </button>
-
           <button
             class="timeline__content__navbar__button"
             data-era="fourth-age"
@@ -147,7 +142,6 @@
               class="timeline__content__navbar__button__icon"
             />
           </button>
-
           <button
             class="timeline__content__navbar__button"
             data-era="dagor-dagorath"
@@ -160,45 +154,77 @@
           </button>
         </div>
 
-        <!-- Optional: Timeline description content that can be toggled -->
         <div class="timeline__content__description" id="timeline-description">
-          <h3 class="timeline__content__description__title">Primeira Era</h3>
+          <h3 class="timeline__content__description__title">
+            Dias Antes dos Dias
+          </h3>
           <p class="timeline__content__description__text">
-            A Primeira Era marca o despertar dos Elfos e o início da longa luta
-            contra as trevas. Morgoth forja os Silmarils e a guerra pelo destino
-            da Terra-média começa.
+            Antes da criação do mundo, quando apenas Eru Ilúvatar existia no
+            Vazio. O tempo ainda não havia começado e apenas a música da criação
+            ecoava no infinito.
           </p>
+
+          <div class="timeline__content__description__lists">
+            <div class="timeline__content__description__section">
+              <h4>Eventos Principais</h4>
+              <ul class="timeline__content__description__list">
+                <li>Os Valar e os Maiar entram em Arda</li>
+                <li>A Primeira Guerra e a Destruição de Arda</li>
+                <li>A Primavera de Arda</li>
+                <li>Melkor ergue as Montanhas de Ferro e explora Utumno</li>
+                <li>As Duas Lâmpadas são destruídas</li>
+                <li>A separação de Aman da Terra-média; fundação de Valinor</li>
+              </ul>
+            </div>
+
+            <div class="timeline__content__description__section">
+              <h4>Figuras Importantes</h4>
+              <ul class="timeline__content__description__list">
+                <li>Tulkas</li>
+                <li>Nessa</li>
+                <li>Yavanna</li>
+              </ul>
+            </div>
+
+            <div class="timeline__content__description__section">
+              <h4>Localizações</h4>
+              <ul class="timeline__content__description__list">
+                <li>O Vazio Atemporal</li>
+                <li>As Salas Intemporais</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="races">
+    <section class="races" id="races">
       <div class="races__content"></div>
     </section>
 
-    <section class="languages">
+    <section class="languages" id="languages">
       <div class="languages__content"></div>
     </section>
 
-    <section class="ringbeares">
+    <section class="ringbeares" id="ringbeares">
       <div class="ringbeares__content"></div>
     </section>
 
-    <section class="heroes">
+    <section class="heroes" id="heroes">
       <div class="heroes__content"></div>
     </section>
 
-    <section class="villains">
+    <section class="villains" id="villains">
       <div class="villains__content"></div>
     </section>
 
-    <section class="armas">
+    <section class="armas" id="armas">
       <div class="armas__content"></div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="footer__content"></div>
     </footer>
-    <script src="./dist/"></script>
+    <script src="./dist/js/script.js"></script>
   </body>
 </html>

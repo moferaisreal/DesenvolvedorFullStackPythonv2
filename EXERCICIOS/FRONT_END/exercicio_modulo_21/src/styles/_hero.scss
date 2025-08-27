@@ -1,42 +1,147 @@
 @use "vars";
 
 .hero {
-  padding: var(--space-l-xl);
+  // REMOVER padding superior para que hero comece imediatamente após header
+  padding: 0 var(--space-l-xl) var(--space-l-xl) var(--space-l-xl);
+  // Garantir que hero ocupe toda altura da viewport
   min-height: 100vh;
+  // Posicionar hero para começar do topo da tela
+  margin-top: 0;
+  // Background da paisagem épica
   background-image: url("../images/bg/bg_hero_desktop.jpg");
   background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   color: vars.$mainText;
+  // Garantir que hero fique atrás do header
+  z-index: 1;
 
   @media (max-width: 768px) {
-    background-image: url("../images/bg/bg_hero_desktop.jpg");
+    padding: 0 var(--space-s) var(--space-l-xl) var(--space-s);
+  }
+
+  @media (max-width: 480px) {
+    background-image: url("../images/bg/bg_hero_mobile.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 0 var(--space-xs) var(--space-l-xl) var(--space-xs);
   }
+
   &__content {
     max-width: 40em;
-    img {
-      max-height: 200px;
+    // Adicionar padding superior para compensar altura do header
+    padding-top: calc(3em + var(--space-m)); // altura do header + espaçamento
+
+    @media (max-width: 768px) {
+      padding-top: calc(2em + var(--space-s));
     }
+
+    &__branding {
+      img {
+        max-height: 200px;
+        @media (max-width: 480px) {
+          max-height: 100px;
+        }
+      }
+    }
+
     p {
       color: vars.$headerText;
       font-weight: bold;
     }
-    &__branding {
-    }
+
     &__list {
       display: flex;
       justify-content: flex-start;
+      align-items: stretch;
+      gap: var(--space-s);
       padding: var(--space-s-m);
-      &__items {
-        margin: var(--space-s);
-        .button:hover {
-          border-color: vars.$mainBlack;
-        }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
       }
 
-      img {
-        max-height: 100px;
+      &__items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+        min-height: 200px;
+        padding: var(--space-s);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: rgba(vars.$mainBg, 0.2);
+          border-color: vars.$headerHover;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+          min-height: 180px;
+          margin-bottom: var(--space-s);
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        img {
+          max-height: 100px;
+          width: auto;
+          object-fit: contain;
+          margin-bottom: var(--space-s);
+          border-radius: 4px;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+          transition: transform 0.3s ease;
+
+          @media (max-width: 768px) {
+            max-height: 80px;
+          }
+        }
+
+        .button {
+          width: 100%;
+          min-height: 50px;
+          margin-top: auto;
+          font-size: var(--font--1);
+
+          &:hover {
+            border-color: vars.$mainBlack;
+          }
+
+          @media (max-width: 768px) {
+            min-height: 45px;
+            font-size: var(--font--2);
+          }
+        }
+
+        &:hover img {
+          transform: scale(1.05);
+        }
       }
     }
+  }
+}
+
+// Opcional: Ajustar header para garantir que fique sobre hero
+.header {
+  // Garantir que header fique sobre hero
+  z-index: 100;
+
+  // Quando transparente, deve ficar completamente sobre a hero
+  &--transparent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  // Quando visível, volta para sticky normal
+  &--visible {
+    position: sticky;
   }
 }

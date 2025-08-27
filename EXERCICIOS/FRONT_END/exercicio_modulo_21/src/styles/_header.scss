@@ -6,28 +6,63 @@
   left: 0;
   background-color: vars.$headerBg;
   color: vars.$headerText;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease, backdrop-filter 0.5s ease,
+    box-shadow 0.5s ease;
   z-index: 100;
-  height: 5em;
+  height: 3em;
 
   @media (max-width: 768px) {
-    height: 60px;
+    height: 2em;
   }
 
-  &--is-hidden {
-    background-color: transparent;
-  }
-  .header {
-    &__logo,
-    &__links__item:first-child {
+  // ===================================================================
+  // ESTADOS DINÂMICOS DO HEADER - CORRIGIDO
+  // ===================================================================
+
+  // Estado transparente - na seção hero
+  &--transparent {
+    background-color: transparent !important;
+    backdrop-filter: none;
+    box-shadow: none;
+
+    .header__logo {
       opacity: 0;
       visibility: hidden;
-      transition: opacity 0.5s ease;
+      transform: translateY(-10px);
+    }
+
+    .header__links__item:first-child {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
     }
   }
 
+  // Estado visível - fora da seção hero
+  &--visible {
+    background-color: vars.$headerBg !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    .header__logo {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .header__links__item:first-child {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  // ===================================================================
+  // ELEMENTOS DO HEADER
+  // ===================================================================
+
   img {
-    max-height: calc(64px - 2 * var(--space-3xs));
+    max-height: calc(3em - 2 * var(--space-3xs) - 4px);
     height: 100%;
     width: auto;
   }
@@ -52,9 +87,9 @@
   &__logo {
     max-width: 5em;
     width: 100%;
-    height: calc(64px - 2 * var(--space-3xs));
+    height: calc(3em - 2 * var(--space-3xs) - 4px);
     margin: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
 
     @media (max-width: 768px) {
       max-width: 4em;
@@ -62,27 +97,27 @@
   }
 
   .button {
-    height: 64px;
-    min-height: 2.5em;
-
     @media (max-width: 768px) {
       font-size: var(--font--1);
       padding: var(--space-3xs);
       height: auto;
-      height: calc(64px - 2 * var(--space-2xs));
+      height: calc(3em - 2 * var(--space-2xs) - 4px);
     }
   }
 
   &__links {
     display: flex;
     align-items: center;
-    height: calc(64px - 2 * var(--space-3xs));
+    height: calc(3em - 2 * var(--space-s) - 4px);
+    gap: var(--space-xs);
+
     &__item {
       font-family: vars.$cursive;
-      font-size: var(--font-1);
+      font-size: var(--font-0);
       color: vars.$headerText;
       text-decoration: none;
-      transition: color 0.3s ease;
+      transition: color 0.3s ease, opacity 0.5s ease, visibility 0.5s ease,
+        transform 0.5s ease;
 
       &:hover {
         color: vars.$headerHover;

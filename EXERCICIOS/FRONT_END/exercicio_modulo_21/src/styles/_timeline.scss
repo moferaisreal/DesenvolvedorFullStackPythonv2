@@ -1,19 +1,14 @@
 @use "vars";
 
 .timeline {
-  padding: var(--space-xl) var(--space-s);
-  background: linear-gradient(
-    135deg,
-    vars.$mainBg 0%,
-    darken(vars.$mainBg, 5%) 100%
-  );
+  padding: var(--space-xl);
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 
   @media (max-width: 768px) {
-    padding: var(--space-l) var(--space-xs);
+    padding: var(--space-xs);
     min-height: auto;
   }
 
@@ -25,19 +20,19 @@
     &__title {
       font-family: vars.$heading;
       color: vars.$mainSection;
-      font-size: var(--font-4);
+      font-size: var(--font-3);
       margin-bottom: var(--space-xs);
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 
       @media (max-width: 768px) {
-        font-size: var(--font-3);
+        font-size: var(--font-2);
       }
     }
 
     &__subtitle {
       font-family: vars.$cursive;
       color: vars.$mainText;
-      font-size: var(--font-1);
+      font-size: var(--font-2);
       margin-bottom: var(--space-xl);
       font-style: italic;
 
@@ -161,11 +156,6 @@
       }
     }
 
-    &__items {
-      display: none; // Hide the empty items for now, you can implement content later
-    }
-
-    // Timeline description section (you can add this later)
     &__description {
       max-width: 800px;
       margin: 0 auto;
@@ -187,12 +177,75 @@
         color: vars.$mainText;
         font-size: var(--font-0);
         line-height: 1.6;
+        margin-bottom: var(--space-m);
+      }
+
+      &__lists {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--space-m);
+        margin-top: var(--space-l);
+      }
+
+      &__section {
+        background: rgba(vars.$headerBg, 0.1);
+        padding: var(--space-s);
+        border-radius: 8px;
+        border: 1px solid rgba(vars.$headerHover, 0.2);
+
+        h4 {
+          font-family: vars.$heading;
+          color: vars.$mainSection;
+          font-size: var(--font-0);
+          margin-bottom: var(--space-xs);
+          text-align: center;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+      }
+
+      &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          font-family: vars.$text;
+          color: vars.$mainText;
+          font-size: var(--font--1);
+          padding: var(--space-2xs) 0;
+          border-bottom: 1px solid rgba(vars.$borders, 0.2);
+          position: relative;
+          padding-left: var(--space-s);
+
+          &:before {
+            content: "•";
+            color: vars.$headerHover;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: var(--space-2xs);
+          }
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          &:hover {
+            color: vars.$headerHover;
+            transform: translateX(2px);
+            transition: all 0.2s ease;
+          }
+        }
       }
     }
   }
 }
 
-// Animation for timeline entrance
+// ===================================================================
+// TIMELINE ANIMATIONS
+// ===================================================================
+
 @keyframes timelineEnter {
   0% {
     opacity: 0;
@@ -214,7 +267,358 @@
   }
 }
 
-// Responsive adjustments for very small screens
+// ===================================================================
+// SIDEBAR LATERAL
+// ===================================================================
+
+// Botão lateral "Detalhes"
+.timeline__details-btn {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(
+    135deg,
+    vars.$headerBg,
+    darken(vars.$headerBg, 10%)
+  );
+  color: vars.$headerText;
+  border: 2px solid vars.$headerHover;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  padding: var(--space-m) var(--space-s);
+  font-family: vars.$heading;
+  font-size: var(--font--1);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  z-index: 90;
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+
+  &:hover {
+    background: linear-gradient(
+      135deg,
+      vars.$headerHover,
+      darken(vars.$headerHover, 5%)
+    );
+    transform: translateY(-50%) translateX(-5px);
+    box-shadow: -6px 0 20px rgba(0, 0, 0, 0.4);
+  }
+
+  &:active {
+    transform: translateY(-50%) translateX(-2px);
+  }
+
+  .timeline__details-btn-arrow {
+    font-size: var(--font-0);
+    transition: transform 0.3s ease;
+  }
+
+  &:hover .timeline__details-btn-arrow {
+    transform: translateX(-2px);
+  }
+
+  @media (max-width: 768px) {
+    position: static;
+    transform: none;
+    writing-mode: initial;
+    text-orientation: initial;
+    border-radius: 8px;
+    margin: var(--space-m) auto 0;
+    width: fit-content;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.timeline-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  visibility: hidden;
+  transition: visibility 0.3s ease;
+
+  &--active {
+    visibility: visible;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+
+    .timeline-sidebar--active & {
+      opacity: 1;
+    }
+  }
+
+  &__panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: 100vh;
+    background: linear-gradient(
+      135deg,
+      vars.$mainBg,
+      lighten(vars.$mainBg, 5%)
+    );
+    border-left: 3px solid vars.$headerHover;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+
+    .timeline-sidebar--active & {
+      transform: translateX(0);
+    }
+
+    @media (max-width: 768px) {
+      width: 100vw;
+    }
+  }
+
+  &__header {
+    padding: var(--space-l);
+    border-bottom: 2px solid rgba(vars.$headerHover, 0.3);
+    background: linear-gradient(
+      135deg,
+      vars.$headerBg,
+      darken(vars.$headerBg, 5%)
+    );
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+  }
+
+  &__title {
+    font-family: vars.$heading;
+    color: vars.$headerHover;
+    font-size: var(--font-1);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    @media (max-width: 768px) {
+      font-size: var(--font-0);
+    }
+  }
+
+  &__close {
+    background: transparent;
+    border: 2px solid vars.$headerHover;
+    color: vars.$headerHover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background: vars.$headerHover;
+      color: vars.$headerBg;
+      transform: scale(1.1);
+    }
+  }
+
+  &__nav {
+    display: flex;
+    background: rgba(vars.$headerBg, 0.1);
+    border-bottom: 1px solid rgba(vars.$headerHover, 0.2);
+    overflow-x: auto;
+
+    @media (max-width: 480px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__nav-btn {
+    flex: 1;
+    padding: var(--space-s) var(--space-xs);
+    background: transparent;
+    border: none;
+    color: vars.$mainText;
+    font-family: vars.$text;
+    font-size: var(--font--1);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+    min-width: fit-content;
+
+    &:hover {
+      background: rgba(vars.$headerHover, 0.1);
+      color: vars.$headerHover;
+    }
+
+    &--active {
+      background: rgba(vars.$headerHover, 0.2);
+      color: vars.$headerHover;
+      border-bottom-color: vars.$headerHover;
+    }
+
+    @media (max-width: 480px) {
+      flex: 1 1 50%;
+      font-size: var(--font--2);
+      padding: var(--space-xs);
+    }
+  }
+
+  &__content {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--space-m);
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(vars.$headerBg, 0.1);
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: vars.$headerHover;
+      border-radius: 10px;
+
+      &:hover {
+        background: darken(vars.$headerHover, 10%);
+      }
+    }
+  }
+
+  &__section {
+    display: none;
+
+    &--active {
+      display: block;
+      animation: sidebarFadeIn 0.3s ease;
+    }
+  }
+
+  &__field {
+    margin-bottom: var(--space-l);
+    padding: var(--space-m);
+    background: rgba(vars.$headerBg, 0.05);
+    border-left: 4px solid vars.$headerHover;
+    border-radius: 0 8px 8px 0;
+
+    h4 {
+      font-family: vars.$heading;
+      color: vars.$mainSection;
+      font-size: var(--font-0);
+      margin: 0 0 var(--space-s) 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-family: vars.$text;
+      color: vars.$mainText;
+      font-size: var(--font--1);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        font-family: vars.$text;
+        color: vars.$mainText;
+        font-size: var(--font--1);
+        padding: var(--space-2xs) 0 var(--space-2xs) var(--space-m);
+        border-bottom: 1px solid rgba(vars.$borders, 0.2);
+        position: relative;
+        line-height: 1.5;
+
+        &:before {
+          content: "•";
+          color: vars.$headerHover;
+          font-weight: bold;
+          position: absolute;
+          left: 0;
+          top: var(--space-2xs);
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &:hover {
+          color: vars.$headerHover;
+          transform: translateX(2px);
+          transition: all 0.2s ease;
+        }
+      }
+    }
+  }
+}
+
+// Sidebar body modifications
+.sidebar-open {
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    .timeline,
+    .hero,
+    .header {
+      filter: blur(2px);
+      transition: filter 0.3s ease;
+    }
+  }
+}
+
+// ===================================================================
+// ANIMATIONS
+// ===================================================================
+
+@keyframes sidebarFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ===================================================================
+// RESPONSIVE ADJUSTMENTS
+// ===================================================================
+
 @media (max-width: 480px) {
   .timeline {
     &__content {
@@ -230,6 +634,60 @@
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-sidebar {
+    &__panel {
+      width: 90vw;
+    }
+
+    &__header {
+      padding: var(--space-m);
+      min-height: 60px;
+    }
+
+    &__content {
+      padding: var(--space-s);
+    }
+
+    &__field {
+      padding: var(--space-s);
+      margin-bottom: var(--space-m);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-sidebar {
+    &__panel {
+      width: 100vw;
+    }
+
+    &__header {
+      padding: var(--space-s);
+      min-height: 60px;
+    }
+
+    &__title {
+      font-size: var(--font--1);
+    }
+
+    &__close {
+      width: 35px;
+      height: 35px;
+      font-size: 18px;
+    }
+
+    &__content {
+      padding: var(--space-xs);
+    }
+
+    &__field {
+      padding: var(--space-xs);
+      margin-bottom: var(--space-s);
     }
   }
 }

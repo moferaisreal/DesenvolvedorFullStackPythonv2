@@ -29,18 +29,27 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 60px;
+  height: 2.5em;
   font-size: var(--font--3);
   text-transform: uppercase;
   text-decoration: none;
-  padding: var(--space-2xs);
+  padding: var(--space-xs) var(--space-s);
   letter-spacing: 1px;
   border: var(--space-3xs) solid vars.$headerHover;
   border-radius: 4px;
   transition: all 0.3s ease;
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 2em;
+  white-space: nowrap;
+
   &:hover {
     color: vars.$headerHover;
     border-color: vars.$headerText;
+  }
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
   &--primary {
     background-color: vars.$buttons;
