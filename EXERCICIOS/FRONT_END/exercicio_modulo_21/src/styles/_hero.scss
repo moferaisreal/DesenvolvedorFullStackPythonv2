@@ -53,7 +53,7 @@
     &__list {
       display: flex;
       justify-content: flex-start;
-      align-items: stretch;
+      align-items: space-between;
       gap: var(--space-s);
       padding: var(--space-s-m);
 
@@ -66,7 +66,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
         flex: 1;
         min-height: 200px;
         padding: var(--space-s);
@@ -74,10 +73,8 @@
         transition: all 0.3s ease;
 
         &:hover {
-          background: rgba(vars.$mainBg, 0.2);
           border-color: vars.$headerHover;
           transform: translateY(-2px);
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         @media (max-width: 768px) {
@@ -95,7 +92,6 @@
           object-fit: contain;
           margin-bottom: var(--space-s);
           border-radius: 4px;
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
           transition: transform 0.3s ease;
 
           @media (max-width: 768px) {
@@ -104,7 +100,7 @@
         }
 
         .button {
-          width: 100%;
+          width: auto;
           min-height: 50px;
           margin-top: auto;
           font-size: var(--font--1);
