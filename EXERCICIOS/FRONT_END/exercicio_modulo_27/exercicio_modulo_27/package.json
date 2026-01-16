@@ -16,7 +16,10 @@
     "format": "prettier --write --experimental-cli src/"
   },
   "dependencies": {
-    "vue": "^3.5.26"
+    "vue": "^3.5.26",
+    "typescript": "^5.3.0",
+    "bootstrap": "^5.3.0",
+    "bootstrap-icons": "^1.11.0"
   },
   "devDependencies": {
     "@tsconfig/node24": "^24.0.3",
