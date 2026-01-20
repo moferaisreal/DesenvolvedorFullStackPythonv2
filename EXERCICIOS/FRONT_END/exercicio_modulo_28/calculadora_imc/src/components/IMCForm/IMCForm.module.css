@@ -1,0 +1,84 @@
+.form-container {
+  background-color: #f3a683;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  color: #303952;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.form-div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  color: #303952;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.input {
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #f5cd79;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input:focus {
+  border-color: #546de5;
+}
+
+.error {
+  color: #e15f41;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 10px;
+}
+
+.buttonPrimary,
+.buttonSecondary {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buttonPrimary {
+  background-color: #63cdda;
+  color: #574b90;
+}
+
+.buttonPrimary:hover {
+  background-color: #3dc1d3;
+}
+
+.buttonSecondary {
+  background-color: #596275;
+  color: #c44569;
+}
+
+.buttonSecondary:hover {
+  background-color: #303952;
+}
