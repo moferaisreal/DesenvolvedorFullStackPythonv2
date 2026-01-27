@@ -45,6 +45,36 @@ const Projects = () => (
       <li>
         <ProjectCard />
       </li>
+      <li>
+        <ProjectCard />
+      </li>
+      <li>
+        <ProjectCard />
+      </li>
+      <li>
+        <ProjectCard />
+      </li>
+      <li>
+        <ProjectCard />
+      </li>
+      <li>
+        <ProjectCard />
+      </li>
+      <li>
+        <ProjectCard />
+      </li>
+      <li>
+        <ProjectCard />
+      </li>
+      <li>
+        <ProjectCard />
+      </li>
+      <li>
+        <ProjectCard />
+      </li>
+      <li>
+        <ProjectCard />
+      </li>
     </UList>
   </section>
 );

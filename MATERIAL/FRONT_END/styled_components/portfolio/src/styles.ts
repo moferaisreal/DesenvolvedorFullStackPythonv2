@@ -10,7 +10,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body{
-    padding-top:clamp(1rem, -0.6364rem + 7.2727vw, 5rem);
+    padding-top: clamp(1rem, -0.6364rem + 7.2727vw, 5rem);
+    padding-bottom: clamp(1rem, -0.6364rem + 7.2727vw, 5rem);
     }
 `;
 export default GlobalStyle;
@@ -26,8 +27,5 @@ export const Container = styled.div`
   @media (max-width: 768px) {
     max-width: 80%;
     display: block;
-  }
-  img {
-    max-width: 100%;
   }
 `;
