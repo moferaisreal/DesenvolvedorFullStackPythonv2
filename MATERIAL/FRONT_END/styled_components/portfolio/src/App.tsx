@@ -1,10 +1,19 @@
-import GlobalStyle from "./styles";
-import Tst from "./tst";
+import About from "./container/About";
+import Projects from "./container/Projects";
+import Sidebar from "./container/Sidebar";
+import GlobalStyle, { Container } from "./styles";
+
 function App() {
   return (
     <>
       <GlobalStyle />
-      <Tst />;
+      <Container>
+        <Sidebar />
+        <main>
+          <About />
+          <Projects />
+        </main>
+      </Container>
     </>
   );
 }
