@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
+import type { Theme } from "./Themes/Types";
 
 const GlobalStyle = createGlobalStyle`
     *{
@@ -12,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
     body{
     padding-top: clamp(1rem, -0.6364rem + 7.2727vw, 5rem);
     padding-bottom: clamp(1rem, -0.6364rem + 7.2727vw, 5rem);
+    background-color: ${(props) => (props.theme as Theme).bgColor};
     }
 `;
 export default GlobalStyle;
