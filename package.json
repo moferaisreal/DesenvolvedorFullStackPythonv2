@@ -1,8 +1,11 @@
 {
   "dependencies": {
+    "@reduxjs/toolkit": "^2.11.2",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
-    "styled-components": "^6.3.8"
+    "react-redux": "^9.2.0",
+    "styled-components": "^6.3.11",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
     "@eslint/css": "^0.14.1",
@@ -10,14 +13,20 @@
     "@eslint/json": "^0.14.0",
     "@eslint/markdown": "^7.5.1",
     "@rsbuild/plugin-eslint": "^1.2.1",
+    "@types/styled-components": "^5.1.36",
+    "@types/uuid": "^10.0.0",
+    "autoprefixer": "^10.4.24",
     "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
     "globals": "^17.0.0",
     "jiti": "^2.6.1",
-    "prettier": "3.8.1",
+    "postcss": "^8.5.6",
+    "prettier": "^3.8.1",
+    "tailwindcss": "^4.2.0",
     "typescript-eslint": "^8.53.1"
   }
 }
